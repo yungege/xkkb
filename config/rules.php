@@ -1,6 +1,9 @@
 <?php
     return [
-        'index' => 'site/index',
-        'login' => 'site/login',
+        // 中文模块
+        'cn' => 'cn/index/index',
+
+        // English模块
+        'en' => 'en/index/index',
     ];
 ?>
