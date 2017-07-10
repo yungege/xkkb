@@ -1,21 +1,161 @@
-.lang{
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.header{
     width: 1200px;
-    height: 40px;
+    position: relative;
     margin: 0 auto;
+}
+.lang{
+    width: 100%;
+    height: 40px;
     text-align: right;
     font-size: 12px;
     color: #656565;
     line-height: 40px;
-    border: 1px solid red;
 }
 .lang select{
     height: 20px;
     margin-top: 14px;
     margin-left: 12px;
-    background-color: #f5f5f5;
+    background-color: #e8e8e8;
+    cursor: pointer;
+    /*border: 1px solid #ccc;*/
 }
 .lang-sline{
-    color: #656560;
     padding-left: 12px;
+}
 
+.meau{
+    height: 70px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.meau .logo{
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    float: left;
+}
+.meau .meau-first{
+    list-style-type: none;
+    text-align: center;
+    float: left;
+    margin-left: 30px;
+    padding: 0px;
+    line-height: 70px;
+}
+
+.meau .meau-first li{
+    height: 70px;
+    float: left;
+    font-size: 16px;
+    
+}
+.meau .meau-first li a{
+    display: block;
+    width: 100%;
+    color: #000000;
+    padding: 0 30px 0 30px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-in-out; /* Safari 和 Chrome */
+    -o-transition: all 0.3s ease-in-out; /* Opera */
+}
+.meau .meau-first > li > a:hover{
+    color: #ffffff;
+    background-color: #6fafe8;
+    text-decoration: none;
+}
+
+.meau .meau-first li .active{
+    color: #ffffff;
+    background-color: #6fafe8;
+    text-decoration: none;
+}
+.meau .search{
+    position: relative;
+    float: right;
+    border: 1px solid #d4d3d3;
+    height: 22px;
+    line-height: 20px;
+    width: 114px;
+    margin-top: 22px;
+    overflow: hidden;
+}
+.meau .search span{
+    display: block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 0px;
+    right: 2px;
+}
+.meau .search span i{
+    font-size: 13px;
+    color: #999;
+    font-weight: 100;
+}
+.meau .search input{
+    width: 100%;
+}
+.meau .meau-second-wrap{
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    border: 1px solid #afafaf;
+    height: 200px;
+    width: 1200px;
+    overflow: hidden;
+}
+.meau .meau-second{
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    height: 100%;
+    /*width: auto;*/
+    /*margin: 0 auto;*/
+}
+.meau .meau-second li{
+    display: inline;
+    float: none!important;
+}
+.meau .meau-second li a{
+    display: block;
+    padding: 24px 28.5px 24px 28.5px;
+    width: 157px;
+    height: 200px;
+    overflow: hidden;
+}
+.meau .meau-second li a:hover{
+    color: #6fafe8;
+}
+.meau .meau-second li a div{
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    overflow: hidden;
+    position: relative;
+}
+.meau .meau-second li a div i{
+    display: block;
+    height: 100%;
+    width: 10px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    text-align: right;
+}
+.meau .meau-second li a div span{
+    display: block;
+    height: 100%;
+    width: 88px;
+    position: absolute;
+    left: 22px;
+    top: 0;
+    text-align: left;
 }
