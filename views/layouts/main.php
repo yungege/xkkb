@@ -54,6 +54,69 @@ AppAsset::register($this);
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="">
+                                    <img src="/imgs/0_08.jpg" width="100" height="112">
+                                    <div>
+                                        <i>*</i>
+                                        <span>公司简介</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/imgs/0_08.jpg" width="100" height="112">
+                                    <div>
+                                        <i>*</i>
+                                        <span>公司简介</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/imgs/0_08.jpg" width="100" height="112">
+                                    <div>
+                                        <i>*</i>
+                                        <span>公司简介</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/imgs/0_08.jpg" width="100" height="112">
+                                    <div>
+                                        <i>*</i>
+                                        <span>公司简介</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/imgs/0_08.jpg" width="100" height="112">
+                                    <div>
+                                        <i>*</i>
+                                        <span>公司简介</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/imgs/0_08.jpg" width="100" height="112">
+                                    <div>
+                                        <i>*</i>
+                                        <span>公司简介</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/imgs/0_08.jpg" width="100" height="112">
+                                    <div>
+                                        <i>*</i>
+                                        <span>公司简介</span>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
