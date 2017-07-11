@@ -1,7 +1,12 @@
-.banner-wrap{
+/*.banner-wrap{
     max-width: 1920px;
     min-width: 1200px;
-    /*max-height: 610px;*/
+    overflow: hidden;
+    margin: 0 auto;
+}*/
+.js-silder{
+    max-width: 1920px;
+    min-width: 1200px;
     overflow: hidden;
     margin: 0 auto;
 }

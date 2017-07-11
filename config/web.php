@@ -6,7 +6,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'defaultRoute' => 'index',
+    'defaultRoute' => 'cn/index/index',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -20,7 +20,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'index/error',
+            'errorAction' => 'site/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -43,7 +43,15 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => require(__DIR__ . '/rules.php'),
+            'rules' => [
+                'zh_cn'    => 'cn/index/index',
+                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/<id:\d+>'     => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>'              => '<controller>/<action>',
+                '<module:\w+>/<action:\w+>/<id:\d+>'         => '<module>/default/<action>',
+                '<module:\w+>/<controller:\w+>'              => '<module>/<controller>/index',
+                '<module:\w+>'                               => '<module>/index/index',
+            ],
         ],
     ],
     'params' => $params,
@@ -59,16 +67,16 @@ $config = [
 
 if (1) {
     // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        'allowedIPs' => ['127.0.0.1', '*.*.*.*'],
-    ];
+    // $config['bootstrap'][] = 'debug';
+    // $config['modules']['debug'] = [
+    //     'class' => 'yii\debug\Module',
+    //     'allowedIPs' => ['127.0.0.1', '*.*.*.*'],
+    // ];
 
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-    ];
+    // $config['bootstrap'][] = 'gii';
+    // $config['modules']['gii'] = [
+    //     'class' => 'yii\gii\Module',
+    // ];
 }
 
 return $config;

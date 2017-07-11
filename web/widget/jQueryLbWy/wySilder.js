@@ -25,7 +25,7 @@
 				}
 			],*/
 			auto: true,//自动播放
-            speed: 20,//轮播图运动速度
+            speed: 30,//轮播图运动速度
 			sideCtrl: true,//是否需要侧边控制按钮
 			"defaultView": 0,//默认显示的所引，IE8不能使用default，否则会报错
             interval: 5000,//自动轮播的时间，以毫秒为单位，默认3000毫秒

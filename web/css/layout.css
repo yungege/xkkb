@@ -3,6 +3,12 @@
     padding: 0;
     border: 0;
 }
+body{
+    font-family: "微软雅黑","weiruanyahei";
+}
+.wrap{
+    padding: 0!important;
+}
 .header{
     width: 1200px;
     position: relative;
