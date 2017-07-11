@@ -1,0 +1,12 @@
+.banner-wrap{
+    max-width: 1920px;
+    min-width: 1200px;
+    /*max-height: 610px;*/
+    overflow: hidden;
+}
+.silder-main-img{
+    height: 100%;
+}
+.content{
+    max-height: 610px;
+}

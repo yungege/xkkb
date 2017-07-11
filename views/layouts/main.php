@@ -16,13 +16,29 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--ie使用edge渲染模式-->
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <meta name="renderer" content="webkit"><!--360渲染模式-->
+    <meta name="format-detection" content="telephone=notelphone=no, email=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="apple-touch-fullscreen" content="yes"/><!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!-- 设置苹果工具栏颜色:默认值为 default，可以定为 black和 black-translucent-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><!-- 不让百度转码 -->
+    <meta name="HandheldFriendly" content="true"><!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="MobileOptimized" content="320"><!-- 微软的老式浏览器 -->
+    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+    <meta name="browsermode" content="application"><!-- UC应用模式 -->
+    <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
+    <meta name="msapplication-tap-highlight" content="no"><!-- windows phone 点击无高光 -->
+
     <link rel="icon" href="/imgs/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="/css/layout.css">
     <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.min.css">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
     <?php $this->head() ?>
 </head>
 <body>
@@ -368,9 +384,9 @@ AppAsset::register($this);
         </div>
     </div>
     <div class="common-info">
-        <p>地址：</p>
-        <p>地址：</p>
-        <p>地址：</p>
+        <p>地址：北京市昌平区马池口两岸共盈工业园西二区</p>
+        <p>北京新科凯邦科技有限公司&emsp;版权所有&emsp;京ICP备14060324号-2</p>
+        <p>电话：010-62633320&emsp;手机：13031060853&emsp;传真：010-62611638</p>
     </div>
 </div>
 <?php $this->endBody() ?>
