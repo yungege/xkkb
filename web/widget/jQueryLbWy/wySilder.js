@@ -230,7 +230,7 @@
             boxWidth = $playEle.width(),
             silderImgs = playEle.silderMain.children(".silder-main-img");
         //设置颜色
-        that._setMeauColor(silderImgs.eq(playEle.index).attr('data-color'));
+        that._setMeauColor(silderImgs.eq(playEle.index + 1).attr('data-color'));
         //当前这张图片往左边出去
         WySilder.animate(silderImgs.eq(playEle.index)[0], {"left": -boxWidth}, null, this._options.speed);
 		playEle.index += 1;
