@@ -229,6 +229,8 @@
             //这个boxWidth应该是图片的宽度，考虑到要支持响应式所以这里的宽度就设为轮播图最外面的盒子的宽度
             boxWidth = $playEle.width(),
             silderImgs = playEle.silderMain.children(".silder-main-img");
+        //设置颜色
+        that._setMeauColor(silderImgs.eq(playEle.index).attr('data-color'));
         //当前这张图片往左边出去
         WySilder.animate(silderImgs.eq(playEle.index)[0], {"left": -boxWidth}, null, this._options.speed);
 		playEle.index += 1;
@@ -274,6 +276,20 @@
         var classname = typeof this._options.activeClass != "string" ? "active" : this._options.activeClass;
         currentBtn.addClass(classname).siblings(".silder-ctrl-con").removeClass(classname);
     }
+    /*根据banner颜色设置菜单栏颜色*/
+    WySilder.prototype._setMeauColor = function (color){
+        $('.meau-first li a').css({
+            'color': color ? color : '#000000',
+        });
+
+        $('.search').css({
+            'border-color': color ? color : '#d4d3d3',
+        });
+
+        $('.fa-search').css({
+            'color': color ? color : '#999',
+        });
+    }
     /*缓动动画，不想有太多的依赖，所以自己写了个简单的缓动动画*/
     WySilder.animate = function (ele,attrsJson,fn,speed){
         var that = this;
@@ -310,7 +326,8 @@
         return eles;
    }
 	$.fn.silder = function (options){
-		console.log(new WySilder(this, options));
+		// console.log();
+        new WySilder(this, options);
 		return this;
 	}
 })(jQuery);

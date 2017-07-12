@@ -5,17 +5,17 @@
     <div class="js-silder">
        <div class="silder-scroll">
             <div class="silder-main">
-                <div class="silder-main-img">
+                <div class="silder-main-img" data-color="#000000">
                     <a href="">
                         <img src="/cn/index/banner_01.jpg" alt="">
                     </a>
                 </div>
-                <div class="silder-main-img">
+                <div class="silder-main-img" data-color="red">
                     <a href="">
                         <img src="/cn/index/banner_01.jpg" alt="">
                     </a>
                 </div>
-                <div class="silder-main-img">
+                <div class="silder-main-img" data-color="green">
                     <a href="">
                         <img src="/cn/index/banner_01.jpg" alt="">
                     </a>
