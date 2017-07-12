@@ -55,7 +55,7 @@
 					;(function (that,$this){
 						setTimeout(function (){
 							that._calcSilderMainWH($this);
-						},1000);
+						},550);
 					})(that,$this);
 				}else{
 					that._calcSilderMainWH($this);

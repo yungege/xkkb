@@ -21,11 +21,11 @@ img{
 	min-width: 320px;
 }
 .silder-scroll{
-	width: 100%;
+	/*width: 100%;*/
 	overflow: hidden;
 }
 .silder-main{
-	position: relative;
+	/*position: relative;*/
 	width: 100%;
 	overflow: hidden;
 }

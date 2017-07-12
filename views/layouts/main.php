@@ -4,8 +4,8 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+// use yii\bootstrap\Nav;
+// use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -38,13 +38,137 @@ AppAsset::register($this);
     <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.min.css">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+    <div class="fix-meau-wrap">
+        <div class="fix-meau-div">
+            <ul class="fix-meau-ul" id="fix-meau-ul-1">
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li style="margin-right: 0">
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="fix-meau-ul" id="fix-meau-ul-2">
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+                <li style="margin-right: 0">
+                    <a href="">
+                        <img src="/imgs/0_08.jpg" width="100" height="112">
+                        <div>
+                            <i>*</i>
+                            <span>公司简介</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="header">
         <div class="lang">
             <span>选择国家/语言</span>
@@ -54,237 +178,29 @@ AppAsset::register($this);
                 <option value="en">English</option>
             </select>
         </div>
-        <div class="meau">
-            <span class="logo"><a href="/cn"><img src="/imgs/logo.png"></a></span>
+        <div class="xkkb-meau">
+            <div class="logo"><a href="/cn"><img src="/imgs/logo.png"></a></div>
             <ul class="meau-first">
                 <li>
                     <a href="/cn">首页</a>
-                    <div class="meau-second-wrap">
-                        <ul class="meau-second">
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="li-no-margin">
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>公司简介</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a href="">关于我们</a>
-                    <div class="meau-second-wrap">
-                        <ul class="meau-second">
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>关于我们</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>关于我们</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a href="">产品展示</a>
-                    <div class="meau-second-wrap">
-                        <ul class="meau-second">
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>产品展示</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>产品展示</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a href="">应用案例</a>
-                    <div class="meau-second-wrap">
-                        <ul class="meau-second">
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>应用案例</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>应用案例</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a href="">技术支持</a>
-                    <div class="meau-second-wrap">
-                        <ul class="meau-second">
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>技术支持</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>技术支持</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a href="">新闻中心</a>
-                    <div class="meau-second-wrap">
-                        <ul class="meau-second">
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>新闻中心</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>新闻中心</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a href="">联系我们</a>
-                    <div class="meau-second-wrap">
-                        <ul class="meau-second">
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>联系我们</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="/imgs/0_08.jpg" width="100" height="112">
-                                    <div>
-                                        <i>*</i>
-                                        <span>联系我们</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
             </ul>
             <div class="search">
@@ -294,8 +210,8 @@ AppAsset::register($this);
         </div>
     </div>
 
-    <div class="content">
-        <?= $content ?>
+    <div class="content-wrap">
+        <?php echo $content; ?>
     </div>
 
     <div class="footer-wrap">
@@ -390,6 +306,29 @@ AppAsset::register($this);
     </div>
 </div>
 <?php $this->endBody() ?>
+<script>
+    !(function(){
+        var overArea = $('.meau-first');
+        var meausWrap = $('.fix-meau-wrap');
+        var meaus = $('.meau-first li');
+        var fixMeauArea = $('fix-meau-div');
+
+        overArea.unbind().bind('mouseenter', function(){
+            meausWrap.removeClass('fix-meau-hide').addClass('fix-meau-show');
+        }).bind('mouseleave', function(){
+            meausWrap.removeClass('fix-meau-show');
+        })
+
+        meaus.each(function(i){
+            $(this).unbind().bind('mouseenter', function(){
+                var className = 'fix-meau-ul-' + (i+1);
+                $('.fix-meau-ul').fadeOut(0);
+                $('#'+className).slideDown(220);
+            })
+        })
+
+    })()
+</script>
 </body>
 </html>
 <?php $this->endPage() ?>
