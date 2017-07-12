@@ -1,30 +1,9 @@
 <?php
     use app\assets\AppAsset;
 ?>
-<!-- <div class="banner-wrap"> -->
-    <div class="js-silder">
-       <div class="silder-scroll">
-            <div class="silder-main">
-                <div class="silder-main-img">
-                    <a href="">
-                        <img src="/cn/index/banner_01.jpg" alt="">
-                    </a>
-                </div>
-                <div class="silder-main-img">
-                    <a href="">
-                        <img src="/cn/index/banner_01.jpg" alt="">
-                    </a>
-                </div>
-                <div class="silder-main-img">
-                    <a href="">
-                        <img src="/cn/index/banner_01.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="js-silder-ctrl"></div>
-    </div>
-<!-- </div> -->
+<div class="banner-wrap">
+    
+</div>
 <div class="pro-list-wrap">
     <div class="pro-list-div">
         <div class="pic">

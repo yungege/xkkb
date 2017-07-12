@@ -1,15 +1,22 @@
-/*.banner-wrap{
-    max-width: 1920px;
-    min-width: 1200px;
-    overflow: hidden;
-    margin: 0 auto;
-}*/
-.js-silder{
-    max-width: 1920px;
-    min-width: 1200px;
-    overflow: hidden;
-    margin: 0 auto;
+.header{
+    z-index: 2;
 }
+.content{
+    width: 100%;
+    height: 810px;
+    /*overflow: hidden;*/
+    position: relative;
+    margin-top: -110px;
+}
+.banner-wrap{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 610px;
+    margin: 0 auto;
+    border: 1px solid red;
+    /*background: url('/cn/index/banner_01.jpg') top center no-repeat;*/
+}
+
 .silder-main-img{
     height: 100%;
 }
