@@ -45,7 +45,7 @@
             <ul>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
+                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
         </div>
     </div>
@@ -58,7 +58,7 @@
             <ul>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
+                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
         </div>
     </div>
@@ -71,7 +71,7 @@
             <ul>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
+                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
         </div>
     </div>
@@ -84,7 +84,7 @@
             <ul>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
                 <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
+                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
         </div>
     </div>

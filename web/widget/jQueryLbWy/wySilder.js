@@ -108,7 +108,7 @@
 				//_width = width || silderMain.children('.silder-main-img').eq(0).find('img').width();
 				_height = height || silderMain.children('.silder-main-img').eq(0).find('img').height();
 			//consoel.log(_width),
-			console.log(silderMain.children('.silder-main-img').eq(0).find('img').height()),
+			// console.log(silderMain.children('.silder-main-img').eq(0).find('img').height()),
 			//silderMain.width(_width);
 			silderMain.height(_height);
 		}else{
@@ -167,7 +167,7 @@
 			}
 			if(that._options.bottomCtrl){
 				for(; i < imgLength; i ++){
-					var temp = '<span class="silder-ctrl-con"><span>' + (i + 1) + '</span></span>';
+					var temp = '<span class="silder-ctrl-con" data-color="' + silderMain.children('.silder-main-img').eq(i).attr('data-color') + '"><span>' + (i + 1) + '</span></span>';
 					ctrlBtnStr += temp;
 				}
 			}
@@ -183,6 +183,8 @@
 		var that = this;
 		$(that).each(function(index, ele) {
 			this.silderCtrl.children().on("click", function (){
+                var color = $(this).attr('data-color');
+                that._setMeauColor(color);
                 var boxWidth = $(ele).width(),
                     silderImgs = ele.silderMain.children('.silder-main-img');
 				if($(this).hasClass('silder-ctrl-next')){
@@ -230,7 +232,8 @@
             boxWidth = $playEle.width(),
             silderImgs = playEle.silderMain.children(".silder-main-img");
         //设置颜色
-        that._setMeauColor(silderImgs.eq(playEle.index + 1).attr('data-color'));
+        this.color = silderImgs.eq(playEle.index + 1).attr('data-color');
+        that._setMeauColor(this.color);
         //当前这张图片往左边出去
         WySilder.animate(silderImgs.eq(playEle.index)[0], {"left": -boxWidth}, null, this._options.speed);
 		playEle.index += 1;

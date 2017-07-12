@@ -94,6 +94,8 @@ img{
 }
 .silder-ctrl-con.active>span{
 	background-color: #7bbedf;
+	opacity: 1;
+	filter: opacity(100);
 }
 
 @media (max-width: 768px){

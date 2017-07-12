@@ -7,6 +7,6 @@ window.onload = function(){
         defaultView: 0,//默认显示的索引
         interval: 5000,//自动轮播的时间，以毫秒为单位，默认3000毫秒
         activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
-        bottomCtrl: false,
+        bottomCtrl: true,
     });
 }
