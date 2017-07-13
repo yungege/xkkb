@@ -1,3 +1,26 @@
+var HoverImg = {
+
+    init: function (){
+        this.getDom();
+        this.changeImg();
+    },
+
+    getDom: function (){
+        this.picLis = $('.pic-content ul li');
+    },
+
+    changeImg: function (){
+        var me = this;
+
+        me.picLis.unbind().bind('mouseenter', function(){
+            var picArea = $(this).parent().parent().prev().children('img');
+            var picUrl = $(this).attr('data-img');
+            picArea.attr('src', picUrl);
+        });
+    },
+
+};
+
 window.onload = function(){
 
     $(".js-silder").silder({
@@ -9,4 +32,6 @@ window.onload = function(){
         activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
         bottomCtrl: true,
     });
+
+    HoverImg.init();
 }
