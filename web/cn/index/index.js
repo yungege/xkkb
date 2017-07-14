@@ -15,7 +15,9 @@ var HoverImg = {
         me.picLis.unbind().bind('mouseenter', function(){
             var picArea = $(this).parent().parent().prev().children('img');
             var picUrl = $(this).attr('data-img');
-            picArea.attr('src', picUrl);
+            if(picUrl){
+                picArea.attr('src', picUrl);
+            }
         });
     },
 
