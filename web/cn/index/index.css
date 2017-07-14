@@ -63,7 +63,7 @@
     left: 0;
 }
 .pro-list-div:hover .pic{
-    bottom: 100px;
+    bottom: 110px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
     -moz-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
     -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
@@ -75,11 +75,12 @@
 }
 .pic-content{
     width: 250px;
-    height: 85px;
+    height: 100px;
     position: absolute;
     left: 30px;
     bottom: 0;
     z-index: 10;
+    overflow: hidden;
 }
 .pic-content ul{
     list-style-type: none;
@@ -91,7 +92,7 @@
     display: inline-block;
     width: 100%;
     overflow: hidden;
-    padding: 4px 0px 4px 0px;
+    padding: 2px 0px 2px 0px;
 }
 .pic-content a:hover{
     color: #6fafe8;
