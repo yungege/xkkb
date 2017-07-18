@@ -32,13 +32,17 @@
     height: 200px;
     margin: 0 auto;
     position: relative;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    background-color: white;
 }
 .pro-list-div{
     float: left;
     width: 300px;
     height: 200px;
-    background-color: #e8e8e8;
+    /*background-color: #e8e8e8;*/
     position: relative;
+    padding: 8px;
 }
 .pro-list-div .pic{
     position: absolute;
@@ -70,8 +74,8 @@
     -o-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
 }
 .pro-list-div .pic img{
-    width: 300px;
-    height: 200px;
+    width: 294px;
+    height: 192px;
 }
 .pic-content{
     width: 250px;

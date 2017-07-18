@@ -42,9 +42,11 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<?php
+    $meauLayout = $this->params['meauList'];
+?>
 <div class="wrap">
-    <div class="fix-meau-wrap">
+    <!-- <div class="fix-meau-wrap">
         <div class="fix-meau-div">
             <ul class="fix-meau-ul" id="fix-meau-ul-1">
                 <li>
@@ -168,7 +170,7 @@ AppAsset::register($this);
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <div class="header">
         <div class="lang">
             <span>选择国家/语言</span>
@@ -180,29 +182,49 @@ AppAsset::register($this);
         </div>
         <div class="xkkb-meau">
             <div class="logo"><a href="/cn"><img src="/imgs/logo.png"></a></div>
-            <ul class="meau-first">
+            <!-- <ul class="meau-first" style="border-bottom:1px solid red;">
+            <?php foreach ($meauLayout as $key => $row): ?>
+                <?php if($key < 7): ?>
                 <li>
-                    <a href="/cn">首页</a>
+                    <a href="<?= $row['url'] ?>"><?= $row['meau'] ?></a>
                 </li>
-                <li>
-                    <a href="">关于我们</a>
-                </li>
-                <li>
-                    <a href="">产品展示</a>
-                </li>
-                <li>
-                    <a href="">应用案例</a>
-                </li>
-                <li>
-                    <a href="">技术支持</a>
-                </li>
-                <li>
-                    <a href="">新闻中心</a>
-                </li>
-                <li>
-                    <a href="">联系我们</a>
-                </li>
-            </ul>
+                <?php endif ?>
+            <?php endforeach ?>
+            </ul> -->
+            <div class="meaus-wrap">
+                <div class="meaus-wrap-meau">
+                <?php foreach ($meauLayout as $key => $row): ?>
+                    <?php if($key < 7): ?>
+                    <a href="<?= $row['url'] ?>"><?= $row['meau'] ?></a>
+                    </a>
+                    <?php endif ?>
+                <?php endforeach ?>
+                </div>
+                <div class="meaus-wrap-hide">
+                    <?php
+                        ob_start();
+                        foreach ($meauLayout as $subKey => $subRow) {
+                            $ul = '<ul class="fix-meau-ul" id="fix-meau-ul-'.($subKey+1).'" '.(!empty($subRow['show']) ? 'data-item="1"' : 'data-item="0"').'>';
+                            if(!empty($subRow['show'])){
+                                foreach ($subRow['show'] as $sKey => $sRow) {
+                                    if($sKey == (count($subRow['show'])-1)){
+                                        $margin = "margin-right:0;";
+                                    }
+                                    else{
+                                        $margin = '';
+                                    }
+                                    $li =  '<li style="'.$margin.'"><a href="'.$sRow['link'].'"><img src="'.$sRow['url'].'" width="100" height="120"><div><i>*</i><span>'.Html::encode($sRow['title']).'</span></div></a></li>';
+                                     $ul .= $li;
+                                }
+                            }
+                            $ul .= '</ul>';
+                            echo $ul;
+                        }
+                        ob_end_flush();
+                    ?>
+                </div>
+            </div>
+
             <div class="search">
                 <span><i class="fa fa-search" aria-hidden="true"></i></span>
                 <input type="text" name="search">
@@ -308,22 +330,22 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 <script>
     !(function(){
-        var overArea = $('.meau-first');
-        var meausWrap = $('.fix-meau-wrap');
-        var meaus = $('.meau-first li');
-        var fixMeauArea = $('fix-meau-div');
+        var overArea = $('.meaus-wrap');
+        var meaus = $('.meaus-wrap-meau a');
+        var meausWrap = $('.meaus-wrap-hide');
 
         overArea.unbind().bind('mouseenter', function(){
-            meausWrap.removeClass('fix-meau-hide').addClass('fix-meau-show');
+            meausWrap.addClass('meaus-wrap-show');
         }).bind('mouseleave', function(){
-            meausWrap.removeClass('fix-meau-show');
+            meausWrap.removeClass('meaus-wrap-show');
         })
 
         meaus.each(function(i){
+            var className = 'fix-meau-ul-' + (i+1);
+
             $(this).unbind().bind('mouseenter', function(){
-                var className = 'fix-meau-ul-' + (i+1);
                 $('.fix-meau-ul').fadeOut(0);
-                $('#'+className).slideDown(220);
+                $('#'+className).fadeIn(200);
             })
         })
 

@@ -5,38 +5,13 @@
 }
 body{
     font-family: "微软雅黑","weiruanyahei","宋体";
+    background-color: #eff0f4;
 }
 .wrap{
     padding: 0!important;
     position: relative;
 }
-.fix-meau-wrap{
-    position: absolute;
-    top: 110px;
-    left: 0;
-    z-index: 999;
-    background-color: rgba(255,255,255,0.8);
-    width: 100%;
-    height: 0px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
-    overflow: hidden;
-    transition: height 0.3s ease;
-    -webkit-transition: height 0.3s ease;
-    -moz-transition: height 0.3s ease;
-    -ms-transition: height 0.3s ease;
-    -o-transition: height 0.3s ease;
-}
-.fix-meau-show{
-    height: 200px;
-}
 
-.fix-meau-div{
-    width: 1200px;
-    height: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-}
 .fix-meau-ul{
     list-style-type: none;
     text-align: center;
@@ -45,7 +20,6 @@ body{
     top: 0;
     left: 0;
     display: none;
-    display: block;
     width: 100%;
 }
 
@@ -56,18 +30,19 @@ body{
 }
 .fix-meau-ul > li > a{
     display: inline-block;
-    padding-top: 24px;
+    padding-top: 22px;
     text-decoration: none;
     font-size: 14px;
     color: #000000;
+}
+.fix-meau-ul > li > a > div{
+    line-height: 50px;
 }
 .fix-meau-ul > li:hover a span{
     color: #6fafe8;
     text-decoration: underline;
 }
-.fix-meau-ul > li > a > img{
-    margin-bottom: 24px;
-}
+
 .fix-meau-ul > li > a i {
     vertical-align: middle;
     padding-right: 5px;
@@ -79,7 +54,6 @@ body{
     position: relative;
     margin: 0 auto;
     z-index: 2;
-    overflow: hidden;
 }
 .lang{
     width: 100%;
@@ -110,54 +84,24 @@ body{
     height: 70px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 .xkkb-meau .logo{
     height: 70px;
     width: 70px;
     overflow: hidden;
-    float: left;
-}
-.xkkb-meau .meau-first{
-    list-style-type: none;
-    text-align: center;
-    float: left;
-    margin-left: 30px;
-    padding: 0px;
-    line-height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.xkkb-meau .meau-first > li{
-    height: 70px;
-    float: left;
-    font-size: 16px;
-    
-}
-.xkkb-meau .meau-first li a{
-    display: block;
-    width: 100%;
-    color: #000000;
-    padding: 0 30px 0 30px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-.xkkb-meau .meau-first > li > a:hover{
-    color: #ffffff;
-    background-color: #6fafe8;
-}
-.xkkb-meau .meau-first li .active{
-    color: #ffffff;
-    background-color: #6fafe8;
-    text-decoration: none;
-}
+
 .xkkb-meau .search{
-    position: relative;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     border: 1px solid #d4d3d3;
     height: 26px;
-    /*line-height: 26px;*/
     width: 205px;
     margin-top: 22px;
     overflow: hidden;
@@ -254,4 +198,49 @@ body{
 .ewm{
     margin-top: 10px;
     margin-left: 105px;
+}
+
+.meaus-wrap{
+    width: 840px;
+    height: 70px;
+    line-height: 70px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.meaus-wrap-meau{
+    width: 100%;
+    height: 100%;
+}
+.meaus-wrap-meau > a{
+    color: #000000;
+    display: inline-block;
+    width: 115.9px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.meaus-wrap-meau > a:hover{
+    color: #ffffff;
+    background-color: #6fafe8;
+}
+.meaus-wrap-hide{
+    width: 1920px;
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0px -460px 0;
+
+    transition: height 0.3s ease;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    -ms-transition: height 0.3s ease;
+    -o-transition: height 0.3s ease;
+}
+.meaus-wrap-show{
+    height: 200px;
 }
