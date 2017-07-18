@@ -78,7 +78,7 @@
             </ul>
         </div>
     </div>
-    <div class="pro-list-div">
+    <div class="pro-list-div" style="margin-right: 0;">
         <div class="pic">
             <h4>应用案例</h4>
             <img src="/cn/index/4.jpg">

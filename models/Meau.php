@@ -28,7 +28,7 @@ class Meau extends ActiveRecord {
     }
 
     public function getMeauList(){
-        $sql = "SELECT * FROM meau_index WHERE `status` = 1 ORDER BY sort,id DESC";
+        $sql = "SELECT * FROM meau_index WHERE `status` = 1 ORDER BY `sort`,`id` DESC";
         $list = Yii::$app->db->createCommand($sql)->queryAll();
         return $list;
     }

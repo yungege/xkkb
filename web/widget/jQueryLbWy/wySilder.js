@@ -281,7 +281,7 @@
     }
     /*根据banner颜色设置菜单栏颜色*/
     WySilder.prototype._setMeauColor = function (color){
-        $('.meau-first li a').css({
+        $('.meaus-wrap-meau a').css({
             'color': color ? color : '#000000',
         });
 
