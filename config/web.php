@@ -43,15 +43,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-                'zh_cn'    => 'cn/index/index',
-                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
-                '<controller:\w+>/<action:\w+>/<id:\d+>'     => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>'              => '<controller>/<action>',
-                '<module:\w+>/<action:\w+>/<id:\d+>'         => '<module>/default/<action>',
-                '<module:\w+>/<controller:\w+>'              => '<module>/<controller>/index',
-                '<module:\w+>'                               => '<module>/index/index',
-            ],
+            'rules' => require(__DIR__ . '/rules.php'),
         ],
     ],
     'params' => $params,

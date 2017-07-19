@@ -19,4 +19,9 @@ class IndexController extends BaseController
             'banner' => $bannerList,
         ]);
     }
+
+    public function actionAboult(){
+
+        return $this->render('aboult');
+    }
 }
