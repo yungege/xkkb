@@ -6,11 +6,17 @@ use Yii;
 use yii\web\Controller;
 use app\modules\cn\controllers\BaseController;
 
+use app\models\Banner;
+
 class IndexController extends BaseController
 {
     
     public function actionIndex(){
+
+        $bannerList = (new Banner)->getBannerList();
         
-        return $this->render('index', []);
+        return $this->render('index', [
+            'banner' => $bannerList,
+        ]);
     }
 }

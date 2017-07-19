@@ -5,31 +5,13 @@
     <div class="js-silder">
        <div class="silder-scroll">
             <div class="silder-main">
-                <div class="silder-main-img" data-color="#000000">
-                    <a href="">
-                        <img src="/cn/index/banner_01.jpg" alt="">
+            <?php foreach ($banner as $bkey => $brow) : ?>
+                <div class="silder-main-img" data-color="<?= $brow['meau_color'] ?>">
+                    <a href="<?= $brow['url'] ?>">
+                        <img src="<?= $brow['img'] ?>" alt="">
                     </a>
                 </div>
-                <div class="silder-main-img" data-color="red">
-                    <a href="">
-                        <img src="/cn/index/b1.jpg" alt="">
-                    </a>
-                </div>
-                <div class="silder-main-img" data-color="green">
-                    <a href="">
-                        <img src="/cn/index/b2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="silder-main-img" data-color="orange">
-                    <a href="">
-                        <img src="/cn/index/b3.jpg" alt="">
-                    </a>
-                </div>
-                <div class="silder-main-img" data-color="blue">
-                    <a href="">
-                        <img src="/cn/index/b4.jpg" alt="">
-                    </a>
-                </div>
+            <?php endforeach ?>
             </div>
         </div>
         <div class="js-silder-ctrl"></div>

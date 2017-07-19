@@ -144,6 +144,8 @@ body{
 }
 .footer-meau h5{
     color: #2c2c2c;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #d4d3d3;
 }
 .footer-meau > div{
     float: left;
@@ -244,3 +246,4 @@ body{
 .meaus-wrap-show{
     height: 200px;
 }
+
