@@ -3,6 +3,7 @@
     min-width: 1200px;
     height: 250px;
     background: url('/cn/aboult/11.jpg') no-repeat top center;
+    margin: 0 auto;
 }
 .heaer-pic-inner{
     width: 1200px;
@@ -77,6 +78,7 @@
     text-indent: 2em;
     margin-bottom: 20px;
     text-align: justify;
+    line-height: 1.7;
 }
 .aboult-pic-btn{
     list-style-type: none;

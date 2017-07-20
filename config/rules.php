@@ -9,8 +9,9 @@
         // '<module:\w+>'                               => '<module>/index/index',
 
         // 中文模块
-        'zh_cn'             => 'cn/index/index',
-        'zh_cn/aboult'      => 'cn/index/aboult',
+        'zh_cn'                 => 'cn/index/index',
+        'zh_cn/aboult'          => 'cn/index/aboult',
+        'zh_cn/product'         => 'cn/product/index',
 
         // English模块
         'en'                => 'en/index/index',
