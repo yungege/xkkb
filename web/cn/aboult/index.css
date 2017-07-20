@@ -2,8 +2,6 @@
     max-width: 1920px;
     min-width: 1200px;
     height: 250px;
-    margin: 0 auto;
-    border: 1px solid red;
     background: url('/cn/aboult/11.jpg') no-repeat top center;
 }
 .heaer-pic-inner{
@@ -23,4 +21,102 @@
     font-size: 30px;
     color: #ffffff;
     background-color: rgba(0,0,0,0.4);
+}
+.about-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+.about-meau{
+    list-style-type: none;
+    overflow: hidden;
+    /*height: 75px;*/
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.about-inner-item{
+    height: 80px;
+    width: 64px;
+    margin-right: 54px;
+    font-size: 16px;
+    float: left;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+.about-inner-item .about-inner-item-icon{
+    width: 100%;
+    height: 47px;
+    background-size: 55px 47px;
+}
+.about-inner-item:hover{
+    border-bottom: 5px solid #6fafe8;
+}
+.about-inner-item:hover p{
+    color: #6fafe8!important;
+}
+.about-inner-item:hover .about-inner-item-icon-wh{
+    background: url(/cn/aboult/ab4.png) no-repeat center!important;
+}
+.about-inner-item:hover .about-inner-item-icon-zz{
+    background: url(/cn/aboult/ab6.png) no-repeat center!important;
+}
+.about-inner-item img{
+    height: 47px;
+}
+.aboult-desc-title{
+    color: #2c2c2c;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.aboult-desc-cont{
+    color: #565656;
+    font-size: 14px;
+    text-indent: 2em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.aboult-pic-btn{
+    list-style-type: none;
+    height: 30px;
+    margin-bottom: 18px;
+}
+.aboult-pic-btn li{
+    float: left;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    color: #2c2c2c;
+    border: 1px solid #6fafe8;
+    cursor: pointer;
+}
+.aboult-pic-btn .aboult-pic-btn-active{
+    background-color: #6fafe8;
+    color: white;
+}
+.aboult-pic-wrap{
+    height: 355px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+.aboult-pic-wrap .aboult-pic-wrap-gc,.aboult-pic-wrap .aboult-pic-wrap-ck{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 360px;
+    text-align: center;
+}
+.aboult-pic-wrap-gc{
+    z-index: 10;
+}
+.aboult-pic-wrap-ck{
+    z-index: 9;
+    display: none;
 }

@@ -46,131 +46,6 @@ AppAsset::register($this);
     $meauLayout = $this->params['meauList'];
 ?>
 <div class="wrap">
-    <!-- <div class="fix-meau-wrap">
-        <div class="fix-meau-div">
-            <ul class="fix-meau-ul" id="fix-meau-ul-1">
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li style="margin-right: 0">
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <ul class="fix-meau-ul" id="fix-meau-ul-2">
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-                <li style="margin-right: 0">
-                    <a href="">
-                        <img src="/imgs/0_08.jpg" width="100" height="112">
-                        <div>
-                            <i>*</i>
-                            <span>公司简介</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
     <div class="header">
         <div class="lang">
             <span>选择国家/语言</span>
@@ -181,16 +56,8 @@ AppAsset::register($this);
             </select>
         </div>
         <div class="xkkb-meau">
-            <div class="logo"><a href="/cn"><img src="/imgs/logo.png"></a></div>
-            <!-- <ul class="meau-first" style="border-bottom:1px solid red;">
-            <?php foreach ($meauLayout as $key => $row): ?>
-                <?php if($key < 7): ?>
-                <li>
-                    <a href="<?= $row['url'] ?>"><?= $row['meau'] ?></a>
-                </li>
-                <?php endif ?>
-            <?php endforeach ?>
-            </ul> -->
+            <div class="logo"><a href="/zh_cn"><img src="/imgs/logo.png"></a></div>
+
             <div class="meaus-wrap">
                 <div class="meaus-wrap-meau">
                 <?php foreach ($meauLayout as $key => $row): ?>
