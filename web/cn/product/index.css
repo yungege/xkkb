@@ -26,7 +26,7 @@
 .product-wrap{
     width: 1200px;
     margin: 0 auto;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .product-meau{
@@ -44,6 +44,12 @@
     text-align: center;
     display: block;
     text-decoration: none;
+    border-bottom: 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 .product-inner-item .product-inner-item-icon{
     width: 100%;
@@ -55,30 +61,6 @@
 }
 .product-inner-item:hover p{
     color: #6fafe8!important;
-}
-.product-inner-item:hover .product-inner-item-icon-sn{
-    background: url(/cn/product/sn2.png) no-repeat center!important;
-}
-.product-inner-item:hover .product-inner-item-icon-yx{
-    background: url(/cn/product/yx2.png) no-repeat center!important;
-}
-.product-inner-item:hover .product-inner-item-icon-fj{
-    background: url(/cn/product/fj2.png) no-repeat center!important;
-}
-.product-inner-item:hover .product-inner-item-icon-dx{
-    background: url(/cn/product/dx2.png) no-repeat center!important;
-}
-.product-inner-item:hover .product-inner-item-icon-yq{
-    background: url(/cn/product/yq2.png) no-repeat center!important;
-}
-.product-inner-item:hover .product-inner-item-icon-yb{
-    background: url(/cn/product/yb2.png) no-repeat center!important;
-}
-.product-inner-item:hover .product-inner-item-icon-jk{
-    background: url(/cn/product/jk2.png) no-repeat center!important;
-}
-.product-inner-item img{
-    height: 47px;
 }
 
 .product-title{
@@ -123,6 +105,18 @@
     height: 150px;
     overflow: hidden;
     border-right: 1px solid #ccc;
+    cursor: pointer;
+    background-position: center center;  
+    background-repeat: no-repeat;  
+    background-size: 100%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.product-li-left:hover{
+    background-size: 105%!important;
 }
 .product-li-right{
     margin-top: 34px;
@@ -162,8 +156,31 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
-    /*border-bottom: 1px solid #ccc;
-    margin-top: 6px;
-    padding-bottom: 3px;
-    width: auto;*/
+}
+.look-more{
+    display: block;
+    height: 40px;
+    width: 106px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #6eb0e7;
+    /*margin-top: 12px;*/
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-left: 1094px;
+}
+.product-list{
+    margin-bottom: 30px;
+}
+.product-page-more{
+    overflow: hidden;
+    text-align: center;
+}
+.product-page-more ul{
+    list-style: none;
+}
+.product-page-more ul li{
+    float: left;
 }
