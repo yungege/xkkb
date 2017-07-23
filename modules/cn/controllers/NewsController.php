@@ -6,33 +6,36 @@ use Yii;
 use yii\web\Controller;
 use app\modules\cn\controllers\BaseController;
 use yii\data\Pagination;
+use app\models\News;
 use app\models\Category;
 
-// use app\models\Product;
-
-class ProductController extends BaseController
+class NewsController extends BaseController
 {
-    const PAGESIZE = 3;
+    const PAGESIZE = 5;
 
     protected $categoryModel;
+    protected $newsModel;
 
     public function init(){
         parent::init();
         $this->categoryModel = new Category;
+        $this->newsModel = new News;
     }
     
     public function actionIndex(){
         $get = Yii::$app->request->get();
-        $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(1);
+        $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(2);
 
         $pn = (!is_numeric($get['pn']) || (int)$get['pn'] <= 0) ? 1 : $get['pn'];
         $c1 = (!is_numeric($get['ca_f']) || (int)$get['ca_f'] <= 0) ? $firstLevelMeau[0]['id'] : $get['ca_f'];
         $offset = ($pn - 1) * self::PAGESIZE;
 
+        
+
         $list = [];
-        $count = $this->categoryModel->getSecondLevelCategoryCountById($c1);
+        $count = $this->newsModel->getNewsCountByType($c1);
         if($count != 0){
-            $list = $this->categoryModel->getSecondLevelCategoryById($c1, $offset, self::PAGESIZE);
+            $list = $this->newsModel->getNewsListByType($c1, $offset, self::PAGESIZE);
         }
         
         $pages = new Pagination([
@@ -43,7 +46,7 @@ class ProductController extends BaseController
         return $this->render('index', [
             'pages' => $pages,
             'category_list' => $firstLevelMeau,
-            'list' => $list,
+            'news_list' => $list,
             'active_category' => $c1,
         ]);
     }

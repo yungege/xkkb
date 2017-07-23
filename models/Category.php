@@ -6,11 +6,11 @@ use yii\base\Model;
 use yii\behaviors\TimestampBehavior;
 use \yii\db\ActiveRecord;
 
-class ProductCategory extends ActiveRecord {
+class Category extends ActiveRecord {
 
     public static function tableName()
     {
-        return 'product_category';
+        return 'category';
     }
 
     public function behaviors()
@@ -28,8 +28,8 @@ class ProductCategory extends ActiveRecord {
     public function rules()
     {
         return [
-            [['pid', 'catename', 'cate_icon','cate_hover_icon','cate_sort','status'], 'required', 'message'=> '数据填写有误！'],
-            [['pid','cate_sort','status','ctime','cate_level'], 'integer'],
+            [['type','pid', 'catename', 'cate_icon','cate_hover_icon','cate_sort','status'], 'required', 'message'=> '数据填写有误！'],
+            [['pid','cate_sort','status','ctime','cate_level','type'], 'integer'],
             ['catename', 'string', 'max'=>12],
             [['cate_icon','cate_hover_icon'], 'string', 'max'=>255],
             [['cate_desc','admin_id'], 'safe'],
@@ -39,9 +39,9 @@ class ProductCategory extends ActiveRecord {
     public function scenarios()
     {
         return [
-            'createFirstLeval' => ['catename','cate_icon','cate_hover_icon','cate_sort'],
+            'createFirstLeval' => ['type','catename','cate_icon','cate_hover_icon','cate_sort'],
             'createSecondLeval' => ['pid','catename','cate_level'],
-            'updateFirstLeval' => ['pid','catename','cate_icon','cate_hover_icon','cate_sort','status','cate_level'],
+            'updateFirstLeval' => ['type','pid','catename','cate_icon','cate_hover_icon','cate_sort','status','cate_level'],
             'updateSecondLeval' => ['pid','catename','status','cate_level'],
         ];
     }
@@ -60,16 +60,17 @@ class ProductCategory extends ActiveRecord {
             'admin_id'          => '',
             'status'            => '',
             'ctime'             => '',
+            'type'              => '',
         ];
     }
 
-    public function getFirstLevelMeauList(){
-        $sql = "SELECT * FROM `product_category` WHERE `status` = 1 AND `pid` = 0 ORDER BY `cate_sort` ASC,`ctime` DESC";
+    public function getFirstLevelMeauList(int $type){
+        $sql = "SELECT * FROM `category` WHERE `type`= {$type} AND `status` = 1 AND `pid` = 0 ORDER BY `cate_sort` ASC,`ctime` DESC";
         return Yii::$app->db->createCommand($sql)->queryAll();
     }
 
-    public function getOneFirstCategory(){
-        $sql = "SELECT * FROM `product_category` WHERE `status` = 1 AND `pid` = 0 ORDER BY `cate_sort` ASC,`ctime` DESC LIMIT 0,1";
+    public function getOneFirstCategory(int $type){
+        $sql = "SELECT * FROM `category` WHERE `type`= {$type} AND `status` = 1 AND `pid` = 0 ORDER BY `cate_sort` ASC,`ctime` DESC LIMIT 0,1";
         return Yii::$app->db->createCommand($sql)->queryAll();
     }
 

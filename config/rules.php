@@ -12,6 +12,7 @@
         'zh_cn'                 => 'cn/index/index',
         'zh_cn/aboult'          => 'cn/index/aboult',
         'zh_cn/product'         => 'cn/product/index',
+        'zh_cn/news'            => 'cn/news/index',
 
         // English模块
         'en'                => 'en/index/index',
