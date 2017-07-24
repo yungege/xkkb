@@ -1,0 +1,81 @@
+.header-pic{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 250px;
+    background: url('/cn/support/khfw.jpg') no-repeat top center;
+    margin: 0 auto;
+}
+.heaer-pic-inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.header-word{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+}
+.support-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+.support-pic{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.support-pic-left{
+    float: left;
+    padding-top: 40px;
+    width: 295px;
+}
+.support-pic-right{
+    /*border: 1px solid red;*/
+    float: right;
+    width: 805px;
+    overflow: hidden;
+}
+.support-pic-right h3{
+    font-size: 24px;
+    color: #2c2c2c;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    display: inline-block;
+}
+
+.support-pic-right .title-p{
+    font-size: 18px;
+    color: #6fafe8;
+    font-weight: bolder;
+    width: 540px;
+    margin-bottom: 40px;
+}
+.support-pic-right .cont-p{
+    font-size: 16px;
+    color: #656565;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 25px;
+}
+.support-pic-right .tel-p{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #656565;
+}
+.support-pic-right .tel-p a{
+    font-family: "Georgia";
+    color: orange;
+    font-size: 16px;
+    text-decoration: none;
+}

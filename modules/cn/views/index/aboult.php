@@ -1,6 +1,8 @@
 <?php
     use app\assets\AppAsset;
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/aboult/index.css");
+    AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
+    AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/widget/Jqlb/index.css");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/Jqlb/jquery.SuperSlide.2.1.1.js");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/aboult/index.js");
@@ -14,21 +16,12 @@
 
 <div class="about-wrap">
     <div class="about-meau">
-        <a class="about-inner-item" href="#" style="border-bottom: 5px solid #6fafe8;">
-            <div class="about-inner-item-icon" style="background: url(/cn/aboult/ab1.png) no-repeat center;"></div>
-            <!-- <img src="/cn/aboult/ab1.png"> -->
-            <p style="color: #6fafe8;">公司简介</p>
-        </a>
-        <a class="about-inner-item" href="#">
-            <div class="about-inner-item-icon about-inner-item-icon-wh" style="background: url(/cn/aboult/ab3.png) no-repeat center;"></div>
-            <!-- <img src="/cn/aboult/ab3.png"> -->
-            <p style="color: #656565;">公司文化</p>
-        </a>
-        <a class="about-inner-item" href="#">
-            <div class="about-inner-item-icon about-inner-item-icon-zz" style="background: url(/cn/aboult/ab5.png) no-repeat center;"></div>
-            <!-- <img src="/cn/aboult/ab5.png"> -->
-            <p style="color: #656565;">检验资质</p>
-        </a>
+        <?php foreach ($category_list as $fcl) : ?>
+            <a class="product-inner-item" data-active="<?= $fcl['id'] == $active_category ? 1 : 0 ?>" data-icon="<?= $fcl['cate_icon'] ?>" data-houver-icon="<?= $fcl['cate_hover_icon'] ?>" href="/zh_cn/aboult?lang=zh_cn&ver=<?= microtime(true) ?>&ca_f=<?= $fcl['id'] ?>" style="<?= $fcl['id'] == $active_category ? 'border-bottom: 5px solid #6fafe8;' : ''; ?>">
+                <div class="product-inner-item-icon" style="background: url(<?= $fcl['id'] == $active_category ? $fcl['cate_hover_icon'] : $fcl['cate_icon']; ?>) no-repeat center;"></div>
+                <p style="color: <?= $fcl['id'] == $active_category ? '#6fafe8;' : '#656565;'; ?>"><?= $fcl['cate_name'] ?></p>
+            </a>
+        <?php endforeach ?>
     </div>
     <div class="aboult-desc">
         <p class="aboult-desc-title">公司简介</p>

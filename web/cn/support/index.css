@@ -1,0 +1,55 @@
+.header-pic{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 250px;
+    background: url('/cn/support/s5.jpg') no-repeat top center;
+    margin: 0 auto;
+}
+.heaer-pic-inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.header-word{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+}
+.support-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+.support-pic{
+    width: 100%;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.support-pic-list{
+    margin-bottom: 40px;
+    position: relative;
+}
+.support-pic-list span{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    background: rgba(0,0,0,0.5);
+    font-size: 24px;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.support-pic-list img{
+    width: 100%;
+}

@@ -25,7 +25,7 @@ class ProductController extends BaseController
         $get = Yii::$app->request->get();
         $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(1);
 
-        $pn = (!is_numeric($get['pn']) || (int)$get['pn'] <= 0) ? 1 : $get['pn'];
+        $pn = (!is_numeric($get['page']) || (int)$get['page'] <= 0) ? 1 : $get['page'];
         $c1 = (!is_numeric($get['ca_f']) || (int)$get['ca_f'] <= 0) ? $firstLevelMeau[0]['id'] : $get['ca_f'];
         $offset = ($pn - 1) * self::PAGESIZE;
 

@@ -29,40 +29,6 @@
     /*border: 1px solid red;*/
 }
 
-.product-meau{
-    list-style-type: none;
-    overflow: hidden;
-    /*height: 75px;*/
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.product-inner-item{
-    height: 80px;
-    margin-right: 25px;
-    font-size: 16px;
-    float: left;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    border-bottom: 0;
-    transition: all 0.2s;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-}
-.product-inner-item .product-inner-item-icon{
-    width: 100%;
-    height: 47px;
-    background-size: 55px 47px;
-}
-.product-inner-item:hover{
-    border-bottom: 5px solid #6fafe8;
-}
-.product-inner-item:hover p{
-    color: #6fafe8!important;
-}
-
 .product-title{
     font-size: 18px;
     padding-left: 22px;
@@ -105,18 +71,28 @@
     height: 150px;
     overflow: hidden;
     border-right: 1px solid #ccc;
-    cursor: pointer;
-    background-position: center center;  
-    background-repeat: no-repeat;  
-    background-size: 100%;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
 }
-.product-li-left:hover{
-    background-size: 105%!important;
+.product-li-left:hover img{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.product-li-left img{
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -webkit-transform;
+    -ms-transition-property: -webkit-transform;
+    -o-transition-property: -webkit-transform;
+
+    transition-duration: 200ms;
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -ms-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
 }
 .product-li-right{
     margin-top: 34px;

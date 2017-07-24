@@ -3,6 +3,7 @@
     use yii\widgets\LinkPager;
 
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/product/index.css");
+    AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/product/index.js");
 
@@ -32,7 +33,10 @@
         <div class="product-cj">
             <ul class="product-cj-ul">
                 <li>
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">
@@ -43,7 +47,10 @@
                     <a href="#" class="product-more">查看详情</a>
                 </li>
                 <li>
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">
@@ -54,7 +61,10 @@
                     <a href="#" class="product-more">查看详情</a>
                 </li>
                 <li style="margin-bottom: 12px;">
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">
@@ -65,7 +75,10 @@
                     <a href="#" class="product-more">查看详情</a>
                 </li>
                 <li style="margin-bottom: 12px;">
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">
@@ -89,7 +102,10 @@
         <div class="product-cj">
             <ul class="product-cj-ul">
                 <li style="margin-bottom: 12px;">
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">
@@ -100,7 +116,10 @@
                     <a href="#" class="product-more">查看详情</a>
                 </li>
                 <li style="margin-bottom: 12px;">
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">
@@ -124,7 +143,10 @@
         <div class="product-cj">
             <ul class="product-cj-ul">
                 <li style="margin-bottom: 12px;">
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">
@@ -135,7 +157,10 @@
                     <a href="#" class="product-more">查看详情</a>
                 </li>
                 <li style="margin-bottom: 12px;">
-                    <div class="product-li-left" style="background-image: url(/cn/product/xp.jpg);">
+                    <div class="product-li-left">
+                        <a href="#">
+                            <img src="/cn/product/xp.jpg">
+                        </a>
                     </div>
                     
                     <div class="product-li-right">

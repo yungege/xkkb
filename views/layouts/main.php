@@ -179,7 +179,7 @@ AppAsset::register($this);
                 <h5 style="width: 54px;">联系我们</h5>
                 <div class="phone">
                     <span>全国服务热线：</span>
-                    <i class="tel"><tel>010-62633320</tel></i>
+                    <a href="tel:010-62633320">010-62633320</a>
                     <p class="ewm">
                         <img src="/imgs/ewm.jpg" width="120">
                     </p>

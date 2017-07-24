@@ -9,10 +9,13 @@
         // '<module:\w+>'                               => '<module>/index/index',
 
         // 中文模块
-        'zh_cn'                 => 'cn/index/index',
-        'zh_cn/aboult'          => 'cn/index/aboult',
-        'zh_cn/product'         => 'cn/product/index',
-        'zh_cn/news'            => 'cn/news/index',
+        'zh_cn'                     => 'cn/index/index',
+        'zh_cn/aboult'              => 'cn/index/aboult',
+        'zh_cn/product'             => 'cn/product/index',
+        'zh_cn/news'                => 'cn/news/index',
+        'zh_cn/support'             => 'cn/support/index',
+        'zh_cn/support/<id:\d+>'    => 'cn/support/detail',
+        'zh_cn/support/service'     => 'cn/support/service',
 
         // English模块
         'en'                => 'en/index/index',

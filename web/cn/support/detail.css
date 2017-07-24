@@ -1,0 +1,97 @@
+.header-pic{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 250px;
+    background: url('/cn/support/s5.jpg') no-repeat top center;
+    margin: 0 auto;
+}
+.heaer-pic-inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.header-word{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+}
+.support-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+
+.service-detail{
+    width: 100%;
+    margin-top: 60px;
+}
+.service-detail-title{
+    width: 284px;
+    height: 60px;
+    line-height: 60px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    background-color: #fcb62d;
+    margin: 0 auto 40px auto;
+    box-shadow: 3px 5px 15px rgba(226,164,43,0.7);
+}
+.service-detail-desc,.service-detail-cont{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+.service-detail .h4-title{
+    display: block;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    color: #6fafe8;
+    font-size: 16px;
+    font-weight: normal;
+    background: url(/cn/support/s-more.png) no-repeat 0 center;
+}
+
+.service-detail-desc > p{
+    text-indent: 1em;
+    font-size: 14px;
+    color: #656565;
+    text-align: justify;
+    line-height: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.service-detail-cont{
+    margin-top: 5px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.service-detail .service-detail-cont-detail{
+    font-size: 14px!important;
+    color: #656565;
+    line-height: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.service-detail .service-detail-cont-detail p{
+    font-size: 14px!important;
+    padding: 10px 0;
+    text-align: justify;
+}
+.service-detail .service-detail-cont-detail p span{
+    font-size: 14px!important;
+}
+.service-detail .service-detail-cont-detail h2{
+    font-weight: 700;
+    padding: 10px 0;
+    color: #333;
+}

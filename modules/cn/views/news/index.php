@@ -3,7 +3,8 @@
     use app\assets\AppAsset;
     use yii\widgets\LinkPager;
 
-    AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/news/index.css"); 
+    AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/news/index.css");
+    AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/news/index.js");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
 ?>

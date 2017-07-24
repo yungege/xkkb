@@ -183,10 +183,11 @@ body{
 .phone span{
     font-size: 13px;
 }
-.phone i{
+.phone a{
     font-size: 20px;
     font-family: "Georgia";
     color: orange;
+    text-decoration: none;
 }
 .common-info{
     min-width: 1200px;
