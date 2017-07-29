@@ -31,11 +31,26 @@
 .support-pic{
     width: 100%;
     margin-top: 60px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .support-pic-list{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
     margin-bottom: 40px;
     position: relative;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+.support-pic-list:hover{
+    box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+    -ms-box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+    -o-box-shadow: 5px 5px 15px rgba(0,0,0,.3);
 }
 .support-pic-list span{
     display: block;
