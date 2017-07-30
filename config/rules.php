@@ -16,6 +16,7 @@
         'zh_cn/support'             => 'cn/support/index',
         'zh_cn/support/<id:\d+>'    => 'cn/support/detail',
         'zh_cn/support/service'     => 'cn/support/service',
+        'zh_cn/contact'             => 'cn/contact/index',
 
         // English模块
         'en'                => 'en/index/index',

@@ -1,0 +1,84 @@
+.header-pic{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 250px;
+    background: url('/cn/contact/c1.jpg') no-repeat top center;
+    margin: 0 auto;
+}
+.heaer-pic-inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.header-word{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+}
+.contact-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+
+.contact-wrap > h1{
+    font-size: 24px;
+    color: #2c2c2c;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.contact-cont{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 60px;
+    /*border: 1px solid green;*/
+}
+.contact-cont .contact-left,.contact-cont .contact-right{
+    float: left;
+}
+.contact-cont .contact-left{
+    margin-right: 100px;
+    width: 420px;
+}
+.contact-cont .contact-right{
+    width: 680px;
+    height: 380px;
+    /*border: 1px solid red;*/
+}
+.contact-cont .contact-left h4{
+    font-size: 18px;
+    color: #565656;
+    margin-bottom: 12px;
+}
+
+.contact-left .contact-type{
+    font-size: 14px;
+    padding: 28px 0 16px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-left .contact-addr{
+    background: url(/cn/contact/dw.png) no-repeat left 30px;
+}
+.contact-left .contact-tel{
+    background: url(/cn/contact/dh.png) no-repeat left 30px;
+}
+.contact-left .contact-cz{
+    background: url(/cn/contact/cz.png) no-repeat left 30px;
+}
+.contact-left .contact-wx{
+    background: url(/cn/contact/wx.png) no-repeat left 30px;
+}
+#allmap{
+    height: 100%;
+    width: 100%;
+}
