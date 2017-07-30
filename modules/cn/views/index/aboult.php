@@ -14,10 +14,10 @@
     </div>
 </div>
 
-<div class="about-wrap">
+<div class="about-wrap" id="meau-13">
     <div class="about-meau">
         <?php foreach ($category_list as $fcl) : ?>
-            <a class="product-inner-item" data-active="<?= $fcl['id'] == $active_category ? 1 : 0 ?>" data-icon="<?= $fcl['cate_icon'] ?>" data-houver-icon="<?= $fcl['cate_hover_icon'] ?>" href="/zh_cn/aboult?lang=zh_cn&ver=<?= microtime(true) ?>&ca_f=<?= $fcl['id'] ?>" style="<?= $fcl['id'] == $active_category ? 'border-bottom: 5px solid #6fafe8;' : ''; ?>">
+            <a class="product-inner-item" data-active="<?= $fcl['id'] == $active_category ? 1 : 0 ?>" data-icon="<?= $fcl['cate_icon'] ?>" data-houver-icon="<?= $fcl['cate_hover_icon'] ?>" href="javascript:void(0)" style="<?= $fcl['id'] == $active_category ? 'border-bottom: 5px solid #6fafe8;' : ''; ?>" data-to="#meau-<?= $fcl['id'] ?>">
                 <div class="product-inner-item-icon" style="background: url(<?= $fcl['id'] == $active_category ? $fcl['cate_hover_icon'] : $fcl['cate_icon']; ?>) no-repeat center;"></div>
                 <p style="color: <?= $fcl['id'] == $active_category ? '#6fafe8;' : '#656565;'; ?>"><?= $fcl['cate_name'] ?></p>
             </a>
@@ -160,14 +160,33 @@
     </div>
 </div>
 
-<div class="header-middle-pic">
+<div class="header-middle-pic" id="meau-14">
 </div>
 
 <div class="company-warp">
     <p class="aboult-desc-title">公司文化</p>
     <p class="company-warp-p"><span>企业宗旨</span>：广交朋友，以诚待人，共同发展</p>
-    <p class="company-warp-p"><span>经营理念</span>：广交朋友，以诚待人，共同发展</p>
-    <p class="company-warp-p"><span>人才理念</span>：广交朋友，以诚待人，共同发展</p>
-    <p class="company-warp-p"><span>质量方针</span>：广交朋友，以诚待人，共同发展</p>
+    <p class="company-warp-p"><span>经营理念</span>：客户至上，品质先行</p>
+    <p class="company-warp-p"><span>人才理念</span>：尊重人的品德，重视人的智慧；承认人的价值，珍惜人的感情； 维护人的尊严，提高人的素质</p>
+    <p class="company-warp-p"><span>质量方针</span>：优质诚信、不断创新、持续改进</p>
     <img src="/cn/aboult/ly.jpg">
+</div>
+
+<div class="full-zz" id="meau-15">
+    <div class="company-warp zz">
+        <p class="aboult-desc-title">公司资质</p>
+        <div class="zz-left">
+            <p>新科凯邦科技有限公司在引进现代化生产技术的同时，也引进了现代化的管理方法和制度，一直把技术研发作为战略重心之一，长期保持较高比例的研发投入，围绕客户需求和技术领先持续创新，为客户不断创造价值.</p>
+            <p>公司先后通过了ISO9001质量管理体系，ISO14001环境管理体系及职业健康安全管理体系OHSAS18001的认证。且通过国家信息产业部的通信产品防护性能监督检测中心的严格检测.</p>
+            <p>为了给用户提供优质的产品和服务，在生产过程中，应用过程控制的方法，对关键工艺过程实行严格控制，不让不合格产品进入到下一道工序。出厂前所有的产品将再次进行最终检测，不合格产品均不能出库.</p>
+            <p>新科凯邦科技有限公司始终坚持客户至上，品质先行的经营理念.</p>
+        </div>
+        <div class="zz-right">
+            <img src="/cn/aboult/zlrz.jpg">
+        </div>
+    </div>
+</div>
+
+<div class="fix-go-top">
+    Top
 </div>
