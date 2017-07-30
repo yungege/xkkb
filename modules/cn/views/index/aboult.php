@@ -159,3 +159,15 @@
         </div>
     </div>
 </div>
+
+<div class="header-middle-pic">
+</div>
+
+<div class="company-warp">
+    <p class="aboult-desc-title">公司文化</p>
+    <p class="company-warp-p"><span>企业宗旨</span>：广交朋友，以诚待人，共同发展</p>
+    <p class="company-warp-p"><span>经营理念</span>：广交朋友，以诚待人，共同发展</p>
+    <p class="company-warp-p"><span>人才理念</span>：广交朋友，以诚待人，共同发展</p>
+    <p class="company-warp-p"><span>质量方针</span>：广交朋友，以诚待人，共同发展</p>
+    <img src="/cn/aboult/ly.jpg">
+</div>

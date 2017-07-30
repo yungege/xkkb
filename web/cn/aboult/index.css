@@ -1,4 +1,4 @@
-.header-pic{
+.header-pic, .header-middle-pic{
     max-width: 1920px;
     min-width: 1200px;
     height: 250px;
@@ -89,4 +89,30 @@
 .aboult-pic-wrap-ck{
     z-index: 9;
     display: none;
+}
+
+.header-middle-pic{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 350px;
+    background: url('/cn/aboult/lme.jpg') no-repeat top center;
+    margin: 0 auto;
+}
+.company-warp{
+    border: 1px solid red;
+    width: 1200px;
+    margin: 50px auto;
+}
+.company-warp .company-warp-p{
+    font-size: 14px;
+    color: 565656;
+    line-height: 30px;
+}
+.company-warp .company-warp-p span{
+    font-size: 18px;
+    color: #2c2c2c;
+}
+.company-warp img{
+    width: 1200px;
+    margin-top: 30px;
 }
