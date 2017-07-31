@@ -12,12 +12,29 @@ var HoverImg = {
     changeImg: function (){
         var me = this;
 
+        var timer = null;
         me.picLis.unbind().bind('mouseenter', function(){
-            var picArea = $(this).parent().parent().prev().children('img');
-            var picUrl = $(this).attr('data-img');
-            if(picUrl){
-                picArea.attr('src', picUrl);
+            var ms = 1,
+                picArea = $(this).parent().parent().prev().children('img'),
+                picUrl = $(this).attr('data-img');
+            if(timer !== null){
+                clearInterval(timer);
+                timer = null;
             }
+            timer = setInterval(function(){
+                if(ms == 1){
+                    if(picUrl){
+                        picArea.attr('src', picUrl);
+                    }
+                    clearInterval(timer);
+                    timer = null;
+                }
+                else{
+                    ms ++;
+                }
+                
+            }, 250);
+            
         });
     },
 
