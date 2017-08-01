@@ -1,0 +1,74 @@
+.header-pic{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 250px;
+    background: url('/cn/case/alb1.jpg') no-repeat top center;
+    margin: 0 auto;
+}
+.heaer-pic-inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.header-word{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+}
+.case-wrap{
+    width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.case-cont-wrap{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.case-item-list{
+    width: 380px;
+    height: 400px;
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid white;
+}
+.case-item-list:hover{
+    border-bottom: 1px solid #ccc;
+}
+
+.case-item-list .case-img-div{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.case-item-list .case-img-div img{
+    width: 100%;
+    height: 100%;
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+.case-item-list:hover img{
+    transform: scale(1.1);
+}
+.case-item-list a{
+    text-decoration: none;
+}
+
+.case-item-list p{
+    line-height: 26px;
+    font-size: 18px;
+    color: #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
