@@ -70,7 +70,8 @@ class Support extends ActiveRecord {
         $query = self::find();
 
         $query->where(['category' => $type,'status' => 1])
-            ->select(['id','pic','title','category','url']);
+            ->select(['id','pic','title','category','url'])
+            ->orderBy('ctime DESC');
         return $query->offset($offset)->limit($limit)->all();
     }
     

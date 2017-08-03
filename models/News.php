@@ -70,7 +70,7 @@ class News extends ActiveRecord {
     public function getNewsListByType(int $type, int $offset = 0, int $limit = 10){
         $query = self::find();
 
-        $query->where(['category' => $type,'status' => 1]);
+        $query->where(['category' => $type,'status' => 1])->orderBy('ctime DESC');
         return $query->offset($offset)->limit($limit)->all();
     }
     
