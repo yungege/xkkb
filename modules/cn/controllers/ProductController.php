@@ -48,4 +48,17 @@ class ProductController extends BaseController
         ]);
     }
 
+    public function actionDetail(){
+        $get = Yii::$app->request->get();
+        $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(1);
+
+        $c1 = (!is_numeric($get['ca_f']) || (int)$get['ca_f'] <= 0) ? $firstLevelMeau[0]['id'] : $get['ca_f'];
+
+        return $this->render('detail', [
+            'info' => [],
+            'category_list' => $firstLevelMeau,
+            'active_category' => $c1,
+        ]);
+    }
+
 }

@@ -34,7 +34,7 @@
             <ul class="product-cj-ul">
                 <li>
                     <div class="product-li-left">
-                        <a href="#">
+                        <a href="/zh_cn/product/1?lang=zh_cn&ver=<?= microtime(true) ?>&ca_f=1">
                             <img src="/cn/product/xp.jpg">
                         </a>
                     </div>
@@ -44,7 +44,7 @@
                         <span><i></i>型号：GYTA</span><br>
                         <span><i></i>敷设方式：管道、架空</span>
                     </div>
-                    <a href="#" class="product-more">查看详情</a>
+                    <a href="/zh_cn/product/1?lang=zh_cn&ver=<?= microtime(true) ?>&ca_f=1" class="product-more">查看详情</a>
                 </li>
                 <li>
                     <div class="product-li-left">

@@ -1,0 +1,86 @@
+.header-pic{
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 250px;
+    background: url('/cn/aboult/11.jpg') no-repeat top center;
+    margin: 0 auto;
+}
+.heaer-pic-inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.header-word{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+}
+.product-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+
+.product-name{
+    color: #2c2c2c;
+    font-size: 24px;
+}
+.product-type{
+    color: #6fafe8;
+    font-size: 24px;
+    font-family: "Arial";
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.product-show{
+    border: 1px solid #333;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.product-show .show-left,.product-show .show-right{
+    float: left;
+    height: 190px;
+    width: 600px;
+}
+.product-show .show-left{
+    width: 599px;
+    border-right: 1px solid #333;
+}
+.product-show .show-right{
+    text-align: center;
+}
+.product-detail-meau{
+    margin-top: 45px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.product-detail-meau > h4{
+    color: #2c2c2c;
+    font-size: 18px;
+    float: left;
+    cursor: pointer;
+    padding: 5px 40px 5px 0;
+}
+.product-desc{
+    width: 100%;
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    height: 400px;
+    margin-bottom: 50px;
+    transition: box-shadow 0.3s;
+}
+.product-desc:hover{
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
