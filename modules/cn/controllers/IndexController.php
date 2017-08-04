@@ -21,6 +21,7 @@ class IndexController extends BaseController
     public function actionIndex(){
 
         $bannerList = (new Banner)->getBannerList();
+        $this->view->params['activeMeau'] = 0;
         
         return $this->render('index', [
             'banner' => $bannerList,
@@ -34,6 +35,7 @@ class IndexController extends BaseController
         $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(4);
         $c1 = (!is_numeric($get['ca_f']) || (int)$get['ca_f'] <= 0) ? $firstLevelMeau[0]['id'] : $get['ca_f'];
 
+        $this->view->params['activeMeau'] = 1;
         return $this->render('aboult', [
             'category_list' => $firstLevelMeau,
             'active_category' => $c1,

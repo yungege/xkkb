@@ -21,6 +21,7 @@ class CaseController extends BaseController
         parent::init();
         $this->categoryModel = new Category;
         $this->caseModel = new Cases;
+        $this->view->params['activeMeau'] = 3;
     }
 
     public function actionIndex(){

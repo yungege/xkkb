@@ -4,7 +4,7 @@ window.onload = function(){
         mainCell:".bd ul",
         autoPage:true,
         effect:"left",
-        autoPlay:true,
+        // autoPlay:true,
         vis:4,
         trigger:"click"
     });
@@ -14,7 +14,7 @@ window.onload = function(){
         mainCell:".bd ul",
         autoPage:true,
         effect:"left",
-        autoPlay:true,
+        // autoPlay:true,
         vis:4,
         trigger:"click"
     });

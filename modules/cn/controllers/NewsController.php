@@ -21,6 +21,7 @@ class NewsController extends BaseController
         parent::init();
         $this->categoryModel = new Category;
         $this->newsModel = new News;
+        $this->view->params['activeMeau'] = 5;
     }
     
     public function actionIndex(){

@@ -62,7 +62,8 @@ AppAsset::register($this);
                 <div class="meaus-wrap-meau">
                 <?php foreach ($meauLayout as $key => $row): ?>
                     <?php if($key < 7): ?>
-                    <a href="<?= $row['url'] ?>"><?= $row['meau'] ?></a>
+                    <a href="<?= $row['url'] ?>" class="<?= $key == $this->params['activeMeau'] ? 'layout-meau-active' : '' ?>">
+                        <?= $row['meau'] ?>
                     </a>
                     <?php endif ?>
                 <?php endforeach ?>
@@ -165,7 +166,7 @@ AppAsset::register($this);
                 </ul>
             </div>
             <div class="news">
-                <h5>技术支持</h5>
+                <h5>新闻中心</h5>
                 <ul class="footer-ul">
                     <li>
                         <a href="">行业新闻</a>

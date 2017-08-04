@@ -19,6 +19,7 @@ class ProductController extends BaseController
     public function init(){
         parent::init();
         $this->categoryModel = new Category;
+        $this->view->params['activeMeau'] = 2;
     }
     
     public function actionIndex(){

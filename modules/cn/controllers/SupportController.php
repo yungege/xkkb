@@ -21,6 +21,7 @@ class SupportController extends BaseController
         parent::init();
         $this->categoryModel = new Category;
         $this->supportModel = new Support;
+        $this->view->params['activeMeau'] = 4;
     }
     
     public function actionIndex(){

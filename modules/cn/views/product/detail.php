@@ -38,13 +38,17 @@
     </div>
 
     <div class="product-detail-meau">
-        <h4>产品描述</h4>
+        <h4 class="meau-active">产品描述</h4>
         <h4>技术参数</h4>
     </div>
 
     <div class="product-desc">
-        <div class="product-desc-top">
-            <p></p>
+        <div class="desc-list-div list-div-active">
+            <img src="/cn/product/desc.jpg">
         </div>
+        <div class="desc-list-div">
+            <img src="/cn/product/ADSSL.jpg">
+        </div>
+        
     </div>
 </div>

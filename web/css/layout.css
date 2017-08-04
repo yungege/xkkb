@@ -252,6 +252,12 @@ body{
     height: 200px;
 }
 
+/*菜单激活样式*/
+.layout-meau-active{
+    color: #ffffff!important;
+    background-color: #6fafe8;   
+}
+
 /*分页样式*/
 .xkkb-pagination{
     list-style: none;

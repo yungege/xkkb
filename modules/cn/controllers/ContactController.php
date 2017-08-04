@@ -15,6 +15,7 @@ class ContactController extends BaseController
     public function init(){
         parent::init();
         $this->categoryModel = new Category;
+        $this->view->params['activeMeau'] = 6;
     }
     
     public function actionIndex(){
