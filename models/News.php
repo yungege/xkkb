@@ -73,6 +73,11 @@ class News extends ActiveRecord {
         $query->where(['category' => $type,'status' => 1])->orderBy('ctime DESC');
         return $query->offset($offset)->limit($limit)->all();
     }
+
+    public function getTop3News(){
+        $sql = "SELECT id,title,cover,`category` FROM news WHERE `status` = 1 ORDER BY ctime DESC LIMIT 0,3";
+        return Yii::$app->db->createCommand($sql)->queryAll();
+    }
     
 
 }

@@ -78,4 +78,9 @@ class Support extends ActiveRecord {
     public function getInfoById(int $id){
         return self::findOne($id)->toArray();
     }
+
+    public function getTop3News(){
+        $sql = "SELECT id,title,pic,`category` FROM support WHERE `status` = 1 AND `category` = 11 ORDER BY ctime DESC LIMIT 0,3";
+        return Yii::$app->db->createCommand($sql)->queryAll();
+    }
 }

@@ -9,25 +9,42 @@ use app\modules\cn\controllers\BaseController;
 use app\models\Banner;
 use app\models\Category;
 use app\models\Qualification;
+use app\models\News;
+use app\models\Support;
+use app\models\Cases;
 
 class IndexController extends BaseController
 {
     protected $categoryModel;
     protected $qualification;
+    protected $bannerModel;
+    protected $newsModel;
+    protected $supportModel;
+    protected $caseModel;
 
     public function init(){
         parent::init();
         $this->categoryModel = new Category;
         $this->qualification = new Qualification;
+        $this->bannerModel = new Banner;
+        $this->newsModel = new News;
+        $this->supportModel = new Support;
+        $this->caseModel = new Cases;
     }
     
     public function actionIndex(){
-
-        $bannerList = (new Banner)->getBannerList();
         $this->view->params['activeMeau'] = 0;
+
+        $bannerList = $this->bannerModel->getBannerList();
+        $newsList = $this->newsModel->getTop3News();
+        $supList = $this->supportModel->getTop3News();
+        $caseList = $this->caseModel->getTop3News();
         
         return $this->render('index', [
             'banner' => $bannerList,
+            'newsList' => $newsList,
+            'supList' => $supList,
+            'caseList' => $caseList,
         ]);
     }
 

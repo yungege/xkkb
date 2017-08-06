@@ -22,14 +22,14 @@
     <div class="pro-list-div">
         <div class="pic">
             <h4>新闻中心</h4>
-            <img src="/cn/index/1.jpg">
+            <img src="<?= $newsList[0]['cover'] ?>" style="margin-top: -45px;">
         </div>
         <div class="pic-content">
             <ul>
-                <li data-img="/cn/index/1.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/2.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/3.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
+                <?php foreach ($newsList as $news): ?>
+                    <li data-img="<?= $news['cover'] ?>"><a href="/zh_cn/news/<?= $news['id'] ?>?ca_f=<?= $news['category'] ?>">•&nbsp;<?= $news['title'] ?></a></li>
+                <?php endforeach ?>
+                <li><a href="/zh_cn/news"><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
         </div>
     </div>
@@ -40,38 +40,36 @@
         </div>
         <div class="pic-content">
             <ul>
-                <li data-img="/cn/index/2.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/3.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/4.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
+                <li data-img="/cn/index/2.jpg"><a href="/zh_cn/aboult">•&nbsp;新科凯邦 激情欢聚.乐享草原</a></li>
+                <!-- <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li> -->
             </ul>
         </div>
     </div>
     <div class="pro-list-div">
-        <div class="pic">
+        <div class="pic" style="">
             <h4>解决方案</h4>
-            <img src="/cn/index/3.jpg">
+            <img src="<?= $supList[0]['pic'] ?>" style="height: 184px;max-width: none;margin-left: -220px;">
         </div>
         <div class="pic-content">
             <ul>
-                <li data-img="/cn/index/3.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/4.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/1.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
+                <?php foreach ($supList as $news): ?>
+                    <li data-img="<?= $news['pic'] ?>"><a href="/zh_cn/support/<?= $news['id'] ?>">•&nbsp;<?= $news['title'] ?></a></li>
+                <?php endforeach ?>
+                <li><a href="/zh_cn/support"><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
         </div>
     </div>
     <div class="pro-list-div" style="margin-right: 0;">
         <div class="pic">
             <h4>应用案例</h4>
-            <img src="/cn/index/4.jpg">
+            <img src="<?= $caseList[0]['cover'] ?>" style="margin-top: -45px;">
         </div>
         <div class="pic-content">
             <ul>
-                <li data-img="/cn/index/4.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/1.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li data-img="/cn/index/2.jpg"><a href="">•&nbsp;2017年世界大战即将开始印度吃翔结束</a></li>
-                <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li>
+                <?php foreach ($caseList as $case): ?>
+                    <li data-img="<?= $case['cover'] ?>"><a href="/zh_cn/case/<?= $case['id'] ?>">•&nbsp;<?= $case['title'] ?></a></li>
+                <?php endforeach ?>
+                <li><a href="/zh_cn/case"><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
         </div>
     </div>
