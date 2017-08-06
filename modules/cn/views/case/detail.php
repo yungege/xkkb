@@ -5,6 +5,8 @@
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/case/detail.css");
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
+
+    $this->title = $info['title'];
 ?>
 
 <div class="header-pic">

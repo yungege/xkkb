@@ -6,6 +6,8 @@
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
     // AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/support/service.js");
     $c = Yii::$app->request->get('ca_f');
+
+    $this->title = '技术支持.客户服务';
 ?>
 
 <div class="header-pic">

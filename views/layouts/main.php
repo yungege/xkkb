@@ -36,6 +36,10 @@ AppAsset::register($this);
     <link rel="icon" href="/imgs/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="/css/layout.css">
     <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.min.css">
+
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/widget/mslider/css/vc-ie8.css" media="screen"><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/widget/mslider/css/ie7.css" type="text/css" media="screen"/><![endif]-->
+
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -110,13 +114,13 @@ AppAsset::register($this);
                 <h5>关于我们</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="">公司简介</a>
+                        <a href="/zh_cn/aboult">公司简介</a>
                     </li>
                     <li>
-                        <a href="">公司文化</a>
+                        <a href="/zh_cn/aboult">公司文化</a>
                     </li>
                     <li>
-                        <a href="">相关资源</a>
+                        <a href="/zh_cn/aboult">相关资源</a>
                     </li>
                 </ul>
             </div>
@@ -124,22 +128,28 @@ AppAsset::register($this);
                 <h5>产品展示</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="">公司简介</a>
+                        <a href="/zh_cn/product">室外光缆系列</a>
                     </li>
                     <li>
-                        <a href="">公司文化</a>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994100.6915&ca_f=2">室内光缆系列</a>
                     </li>
                     <li>
-                        <a href="">相关资源</a>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994259.8186&ca_f=3">数据中心系列</a>
                     </li>
                     <li>
-                        <a href="">公司简介</a>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994278.4116&ca_f=4">光纤入户系列</a>
                     </li>
                     <li>
-                        <a href="">公司文化</a>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994299.8783&ca_f=5">光纤跳线系列</a>
                     </li>
                     <li>
-                        <a href="">相关资源</a>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994301.5977&ca_f=6">光传输设备</a>
+                    </li>
+                    <li>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994308.7209&ca_f=7">综合布线</a>
+                    </li>
+                    <li>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994314.445&ca_f=8">安防监控</a>
                     </li>
                 </ul>
             </div>
@@ -147,10 +157,10 @@ AppAsset::register($this);
                 <h5>应用案例</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="">机房应用</a>
+                        <a href="zh_cn/case">机房应用</a>
                     </li>
                     <li>
-                        <a href="">监控应用</a>
+                        <a href="zh_cn/case">监控应用</a>
                     </li>
                 </ul>
             </div>
@@ -158,10 +168,10 @@ AppAsset::register($this);
                 <h5>技术支持</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="">解决方案</a>
+                        <a href="/zh_cn/support">解决方案</a>
                     </li>
                     <li>
-                        <a href="">客户服务</a>
+                        <a href="/zh_cn/support/service?lang=zh_cn&ver=1501994359.7889&ca_f=12">客户服务</a>
                     </li>
                 </ul>
             </div>
@@ -169,10 +179,10 @@ AppAsset::register($this);
                 <h5>新闻中心</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="">行业新闻</a>
+                        <a href="/zh_cn/news">行业新闻</a>
                     </li>
                     <li>
-                        <a href="">新科凯邦</a>
+                        <a href="/zh_cn/news?lang=zh_cn&ver=1501994391.4437&ca_f=10">新科凯邦</a>
                     </li>
                 </ul>
             </div>

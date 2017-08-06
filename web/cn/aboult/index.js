@@ -88,3 +88,17 @@ window.onload = function(){
 
     changePic.init();
 }
+
+window.$ = jQuery.noConflict();
+$(document).ready(function(){
+    var slider = new MasterSlider();
+    slider.setup('masterslider' , {
+        width:500,
+        height:713,
+        space:5,
+        view:'basic'
+    });
+    slider.control('arrows');   
+    slider.control('scrollbar' , {dir:'h'});    
+    slider.control('thumblist' , {autohide:false ,dir:'v',arrows:false});
+});

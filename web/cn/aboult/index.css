@@ -112,9 +112,10 @@
     font-size: 18px;
     color: #2c2c2c;
 }
-.company-warp img{
+.company-warp > img{
     width: 1200px;
     margin-top: 20px;
+    border: 1px solid #ccc;
 }
 .full-zz{
     width: 100%;
@@ -134,21 +135,21 @@
     padding-top: 10px;
     font-size: 14px;
     color: #565656;
-    width: 774px;
+    width: 650px;
     /*border: 1px solid green;*/
+    padding-right: 48px;
 }
 .zz .zz-left > p{
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .company-warp .zz-right{
-    width: 424px;
-    border: 1px solid red;
+    width: 500px;
+    background-color: #fff;
+    /*border: 1px solid #ccc;*/
 }
-.company-warp .zz-right img{
-    width: 276px;
-    margin-top: 0;
-}
+
 .fix-go-top{
     position: fixed;
     top: 30%;

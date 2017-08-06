@@ -5,7 +5,17 @@
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/widget/Jqlb/index.css");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/Jqlb/jquery.SuperSlide.2.1.1.js");
+
+    AppAsset::addCss($this, Yii::$app->request->baseUrl."/widget/mslider/css/masterslider.css");
+    AppAsset::addCss($this, Yii::$app->request->baseUrl."/widget/mslider/css/ms-showcase2.css");
+    AppAsset::addCss($this, Yii::$app->request->baseUrl."/widget/mslider/css/masterslider.main.css");
+    AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/mslider/js/modernizr-2.6.2.min.js");
+    AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/mslider/js/masterslider.min.js");
+    AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/mslider/js/jquery.easing.min.js");
+
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/aboult/index.js");
+
+    $this->title = '关于我们';
 ?>
 
 <div class="header-pic">
@@ -182,7 +192,34 @@
             <p>新科凯邦科技有限公司始终坚持客户至上，品质先行的经营理念.</p>
         </div>
         <div class="zz-right">
-            <img src="/cn/aboult/zlrz.jpg">
+            <div class="ms-showcase2-template ms-dir-v"> 
+                <!-- masterslider -->
+                <div class="master-slider ms-skin-default" id="masterslider">
+                    <?php foreach ($list as $pic): ?>
+                        <div class="ms-slide">
+                            <img src="/widget/mslider/masterslider/loading-2.gif" data-src="<?= $pic['img'] ?>" alt="lorem ipsum dolor sit"/> 
+                            <img class="ms-thumb" src="<?= $pic['thumb'] ?>" alt="thumb" /> 
+                        </div>
+                    <?php endforeach ?>
+                    <!-- <div class="ms-slide">
+                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/>
+                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" />
+                    </div>
+                    <div class="ms-slide">
+                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/> 
+                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" /> 
+                    </div>
+                    <div class="ms-slide"> 
+                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/> 
+                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" /> 
+                    </div>
+                    <div class="ms-slide"> 
+                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/> 
+                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" /> 
+                    </div> -->
+                </div>
+                <!-- end of masterslider --> 
+            </div>
         </div>
     </div>
 </div>

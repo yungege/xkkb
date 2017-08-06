@@ -8,6 +8,8 @@
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
     // AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/support/detail.js");
     $c = Yii::$app->request->get('ca_f');
+
+    $this->title = Html::encode($cont['title']);
 ?>
 
 <div class="header-pic">

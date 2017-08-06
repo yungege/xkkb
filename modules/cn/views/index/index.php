@@ -1,5 +1,6 @@
 <?php
     use app\assets\AppAsset;
+    $this->title = '新科凯邦';
 ?>
 <div class="banner-wrap">
     <div class="js-silder">

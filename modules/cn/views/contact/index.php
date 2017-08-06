@@ -8,6 +8,8 @@
     AppAsset::addScript($this, 'http://api.map.baidu.com/api?v=2.0&ak=KUkNWUT6oWTdAk9XpGPcGM7HGEU42h1i');
     AppAsset::addScript($this, 'http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js');
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/contact/index.js");
+
+    $this->title = '联系我们';
 ?>
 
 <div class="header-pic">
