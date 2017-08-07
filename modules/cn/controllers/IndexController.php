@@ -4,6 +4,7 @@ namespace app\modules\cn\controllers;
 
 use Yii;
 use yii\web\Controller;
+use yii\helpers\Html;
 use app\modules\cn\controllers\BaseController;
 
 use app\models\Banner;
@@ -12,6 +13,7 @@ use app\models\Qualification;
 use app\models\News;
 use app\models\Support;
 use app\models\Cases;
+use app\models\Message;
 
 class IndexController extends BaseController
 {
@@ -48,8 +50,6 @@ class IndexController extends BaseController
         ]);
     }
 
-    
-    
     public function actionAboult(){
         $get = Yii::$app->request->get();
         $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(4);
@@ -63,5 +63,34 @@ class IndexController extends BaseController
             'active_category' => $c1,
             'list' => $list,
         ]);
+    }
+
+    public function actionCont(){
+        $emailPreg = "/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/";
+        $post = Yii::$app->request->post();
+        if(empty(trim($post['mobile'])) || !preg_match("/^1\d{10}$/", trim($post['mobile']))){
+            $this->error('请输入正确的手机号.');
+        }
+
+        if(!empty(trim($post['email'])) && !preg_match($emailPreg, trim($post['email']))){
+            $this->error('请输入正确的邮箱地址.');
+        }
+
+        $model = new Message;
+
+        $model->name = Html::encode(trim($post['name']));
+        $model->mobile = Html::encode(trim($post['mobile']));
+        $model->email = Html::encode(trim($post['email']));
+        $model->addr = Html::encode(trim($post['address']));
+        $model->desc = Html::encode(trim($post['desc']));
+        $model->ctime = time();
+
+        $res = $model->save();
+        if($res === false){
+            $this->error('服务繁忙,请稍后再试.');
+        }
+        else{
+            $this->out();
+        }
     }
 }

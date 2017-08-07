@@ -21,6 +21,24 @@ class BaseController extends Controller
         $this->view->params['meauList'] = $meauList;
     }
 
+    protected function out($data = array()){
+        header('Content-type: application/json');
+        $res = [
+            'code' => 200,
+            'msg' => '操作成功',
+            'data' => $data
+        ];
+        exit(json_encode($res));
+    }
 
+    protected function error($msg = ''){
+        header('Content-type: application/json');
+        $res = [
+            'code' => -1,
+            'msg' => !empty($msg) ? $msg : '操作失败',
+            'data' => []
+        ];
+        exit(json_encode($res));
+    }
 
 }

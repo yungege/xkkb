@@ -21,6 +21,7 @@
         'zh_cn/contact'             => 'cn/contact/index',
         'zh_cn/case'                => 'cn/case/index',
         'zh_cn/case/<id:\d+>'       => 'cn/case/detail',
+        '/cont'                     => 'cn/index/cont',
 
         // English模块
         'en'                => 'en/index/index',

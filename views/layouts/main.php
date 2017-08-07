@@ -188,6 +188,9 @@ AppAsset::register($this);
             </div>
             <div class="contact">
                 <h5 style="width: 54px;">联系我们</h5>
+                <ul class="footer-ul">
+                    <li style="color:#6fafe8;" id="show-div">立即留言</li>
+                </ul>
                 <div class="phone">
                     <span>全国服务热线：</span>
                     <a href="tel:010-62633320">010-62633320</a>
@@ -203,6 +206,33 @@ AppAsset::register($this);
         <p>地址：北京市昌平区马池口两岸共盈工业园西二区</p>
         <p>北京新科凯邦科技有限公司&emsp;版权所有&emsp;京ICP备14060324号-2</p>
         <p>电话：010-62633320&emsp;手机：13031060853&emsp;传真：010-62611638</p>
+    </div>
+</div>
+<div class="fix-contact">
+    <div class="fix-contact-inner">
+        <form name="cont-form">
+            <div class="int-div">
+                <input type="text" name="name" id="name" placeholder="姓名">
+                <span class="int-name"></span>
+            </div>
+            <div class="int-div">
+                <input type="text" name="mobile" id="mobile" placeholder="手机 (必填)">
+                <span class="int-mobile"></span>
+            </div>
+            <div class="int-div">
+                <input type="text" name="email" id="email" placeholder="Email">
+                <span class="int-email"></span>
+            </div>
+            <div class="int-div">
+                <input type="text" name="address" id="address" placeholder="地址">
+                <span class="int-addr"></span>
+            </div>
+            <div class="int-div">
+                <textarea rows="4" name="desc" id="desc" placeholder="选择成就未来 财富就此开始"></textarea>
+            </div>
+            <button type="button" id="sub">发&nbsp;送</button>
+            <button type="button" id="clo">取&nbsp;消</button>
+        </form>
     </div>
 </div>
 <?php $this->endBody() ?>
@@ -227,7 +257,63 @@ AppAsset::register($this);
             })
         })
 
+        var cont = {
+
+            init: function(){
+                this.getDom();
+                this.showDialog();
+                this.hideDialog();
+                this.postData();
+            },
+            getDom:function(){
+                this.form = $('form[name=cont-form]');
+                this.showBtn = $('#show-div');
+                this.subBtn = $('#sub');
+                this.nameInt = $('#name');
+                this.mobileInt = $('#mobile');
+                this.emailInt = $('#email');
+                this.addrInt = $('#address');
+                this.descInt = $('#desc');
+                this.formArea = $('.fix-contact');
+                this.closeBtn = $('#clo');
+            },
+            showDialog: function(){
+                var me = this;
+
+                me.showBtn.unbind().bind('click', function(){
+                    me.formArea.fadeIn(200);
+                });
+            },
+            hideDialog: function(){
+                var me = this;
+
+                me.closeBtn.unbind().bind('click', function(){
+                    me.formArea.fadeOut(200);
+                });
+            },
+            postData: function(){
+                var me = this;
+
+                me.subBtn.unbind().bind('click', function(){
+                    var data = me.form.serialize();
+                    $.post('/cont', data, function(json){
+                        if(json.code == 200){
+                            alert('感谢留言,工作人员会尽快与您联系.');
+                            me.formArea.fadeOut(200);
+                        }
+                        else{
+                            alert(json.msg);
+                        }
+                        return false;
+                    });
+                });
+            },
+        };
+
+        cont.init();
+
     })()
+
 </script>
 </body>
 </html>
