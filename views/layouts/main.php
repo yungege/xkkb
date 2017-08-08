@@ -98,7 +98,7 @@ AppAsset::register($this);
             </div>
 
             <div class="search">
-                <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                <i class="fa fa-search" aria-hidden="true"></i>
                 <input type="text" name="search">
             </div>
         </div>
