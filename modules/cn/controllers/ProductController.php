@@ -7,18 +7,20 @@ use yii\web\Controller;
 use app\modules\cn\controllers\BaseController;
 use yii\data\Pagination;
 use app\models\Category;
-
-// use app\models\Product;
+use app\models\Product;
+use yii\web\NotFoundHttpException;
 
 class ProductController extends BaseController
 {
     const PAGESIZE = 3;
 
     protected $categoryModel;
+    protected $productModel;
 
     public function init(){
         parent::init();
         $this->categoryModel = new Category;
+        $this->productModel = new Product;
         $this->view->params['activeMeau'] = 2;
     }
     
@@ -34,6 +36,14 @@ class ProductController extends BaseController
         $count = $this->categoryModel->getSecondLevelCategoryCountById($c1);
         if($count != 0){
             $list = $this->categoryModel->getSecondLevelCategoryById($c1, $offset, self::PAGESIZE);
+        }
+
+        if(!empty($list)){
+            foreach ($list as &$lv) {
+                $proList = (array)$this->productModel->getProductList4ById($lv['id']);
+                $lv['proList'] = $proList;
+            }
+            
         }
         
         $pages = new Pagination([
@@ -53,13 +63,76 @@ class ProductController extends BaseController
         $get = Yii::$app->request->get();
         $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(1);
 
-        $c1 = (!is_numeric($get['ca_f']) || (int)$get['ca_f'] <= 0) ? $firstLevelMeau[0]['id'] : $get['ca_f'];
+        $c1 = (int)$get['ca_f'];
+        $c2 = (int)$get['ca_s'];
+        $id = (int)$get['id'];
+
+        if($id <= 0 || $c1 <= 0 || $c2 <= 0){
+            throw new NotFoundHttpException("Page not found");
+        }
+
+        $model = Product::findOne([
+            'id' => $id, 
+            'pro_first_type' => (int)$c1,
+            'pro_second_type' => (int)$c2
+        ]);
+
+        if($model === null){
+            throw new NotFoundHttpException("Page not found");
+        }
 
         return $this->render('detail', [
-            'info' => [],
+            'info' => $model->toArray(),
             'category_list' => $firstLevelMeau,
             'active_category' => $c1,
         ]);
+    }
+
+    public function actionSeclist(){
+        $get = Yii::$app->request->get();
+        $pageSize = 12;
+
+        $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(1);
+
+        $c1 = (int)$get['ca_f'];
+        $c2 = (int)$get['ca_s'];
+        $pn = (!is_numeric($get['page']) || (int)$get['page'] <= 0) ? 1 : $get['page'];
+        $offset = ($pn - 1) * $pageSize;
+
+        if($c1 <= 0 || $c2 <= 0){
+            throw new NotFoundHttpException("Page not found");
+        }
+
+        $catExists = Category::findOne([
+            'id' => $c2,
+            'pid' => $c1,
+            'status' => 1,
+        ]);
+        if($catExists === null){
+            throw new NotFoundHttpException("Page not found");
+        }
+
+        $list = [];
+        $count = $this->productModel->getCountByType($c1, $c2);
+        if($count > 0){
+            $list = $this->productModel->getListByPage($c1, $c2, $offset, $pageSize);
+        }
+
+        $pages = new Pagination([
+            'totalCount' => $count,
+            'pageSize' => $pageSize,
+        ]);
+
+        $sTitle = Category::findOne($c2)->cate_name;
+
+        return $this->render('list', [
+            'pages' => $pages,
+            'category_list' => $firstLevelMeau,
+            'list' => $list,
+            'active_category' => $c1,
+            'mTitle' => $sTitle,
+        ]);
+        
     }
 
 }

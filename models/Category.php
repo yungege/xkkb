@@ -83,10 +83,8 @@ class Category extends ActiveRecord {
     }
 
     public function getSecondLevelCategoryById(int $id, int $offset = 0, int $limit = 3){
-        $query = self::find();
-
-        $query->where(['pid' => $id,'status' => 1]);
-        return $query->offset($offset)->limit($limit)->all();
+        $sql = "SELECT id,pid,cate_name FROM `category` WHERE `pid`= {$id} AND `status` = 1 AND `cate_level` = 2 ORDER BY `id` ASC LIMIT {$offset},{$limit}";
+        return Yii::$app->db->createCommand($sql)->queryAll();
     }
 
 }

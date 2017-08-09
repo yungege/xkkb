@@ -10,7 +10,9 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
-    public $layout = "main_bak";
+    // public $layout = "main";
+
+    public $layout = false;
 
     public function actions()
     {
@@ -44,6 +46,8 @@ class SiteController extends Controller
      */
     public function actionError()
     {
+        $this->layout = false;
+
         if( $error = Yii::app()->errorHandler->error) {
             if(Yii::app()->request->isAjaxRequest)
                 echo $error['message'];

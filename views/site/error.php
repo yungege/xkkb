@@ -1,27 +1,87 @@
-<?php
+<!DOCTYPE html>
+<html>
+<title>很抱歉，此页面暂时找不到！</title>
+<meta charset="utf-8">
+<style type="text/css">
+    body {
+        margin: 0px; 
+        padding: 0px; 
+        font-family: "微软雅黑", Arial, "Trebuchet MS", Verdana, Georgia,Baskerville,Palatino,Times; 
+        font-size: 16px;
+    }
+    div{
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    a {
+        text-decoration: none; 
+        color: #1064A0;
+    }
+    a:hover {
+        color: #0078D2;
+    }
+    img { 
+        border:none; 
+    }
+    h1,h2,h3,h4 {
+        margin: 0;
+        font-weight: normal; 
+        font-family: "微软雅黑", Arial, "Trebuchet MS", Helvetica, Verdana; 
+    }
+    h1{
+        font-size: 44px; 
+        color:#0188DE; 
+        padding:20px 0px 10px 0px;
+    }
+    h2{
+        color:#0188DE; 
+        font-size:16px; 
+        padding:10px 0px 40px 0px;
+    }
 
-/* @var $this yii\web\View */
-/* @var $name string */
-/* @var $message string */
-/* @var $exception Exception */
+    #page{
+        width:910px; 
+        padding:20px 20px 40px 20px; 
+        margin-top:80px;
+        border-style:dashed;
+        border-color:#e4e4e4;
+        line-height:30px;
+    }
+    .button{
+        width:180px; 
+        height:28px; 
+        margin-left:0px; 
+        margin-top:10px; 
+        background:#009CFF; 
+        border-bottom:4px solid #0188DE; 
+        text-align:center;
+    }
+    .button a{
+        width:180px; 
+        height:28px; 
+        display:block; 
+        font-size:14px; 
+        color:#fff; 
+    }
+    .button a:hover{ 
+        background:#5BBFFF;
+    }
+</style>
 
-use yii\helpers\Html;
+</head>
+<body>
 
-$this->title = $name;
-?>
-<div class="site-error">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+    <div id="page">
+        <h1>抱歉，找不到此页面~</h1>
+        <h2>Sorry, the page now can not be accessed. </h2>
+        <font color="#666666"> 
+            你请求访问的页面，暂时找不到，我们建议你返回首页官网进行浏览，谢谢！
+        </font>
+        <br><br>
+        <div class="button">
+            <a href="/" title="进入官网" target="_blank">进入官网</a>
+        </div>
     </div>
 
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
-</div>
+</body>
+</html>

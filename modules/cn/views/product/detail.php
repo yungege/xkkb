@@ -1,6 +1,7 @@
 <?php
     use app\assets\AppAsset;
     use yii\widgets\LinkPager;
+    use yii\helpers\Html;
 
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/product/detail.css");
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
@@ -26,14 +27,14 @@
         <?php endforeach ?>
     </div>
 
-    <h3 class="product-name">层绞式铠装通信光缆</h3>
-    <h4 class="product-type">GYTA</h4>
+    <h3 class="product-name"><?= Html::encode($info['pro_name']) ?></h3>
+    <h4 class="product-type"><?= Html::encode($info['pro_model']) ?></h4>
 
     <div class="product-show">
-        <div class="show-left" style="background: url(/cn/product/ADSSL.jpg) no-repeat left center;">
+        <div class="show-left" style="background: url(<?= $info['pro_cover_pic'] ?>) no-repeat left center;">
             
         </div>
-        <div class="show-right" style="background: url(/cn/product/ADSSR.jpg) no-repeat center center;">
+        <div class="show-right" style="background: url(<?= $info['pro_cover_pic_2'] ?>) no-repeat center center;">
 
         </div>
     </div>
@@ -45,10 +46,10 @@
 
     <div class="product-desc">
         <div class="desc-list-div list-div-active">
-            <img src="/cn/product/desc.jpg">
+            <?= Html::decode($info['pro_desc']) ?>
         </div>
         <div class="desc-list-div">
-            <img src="/cn/product/ADSSL.jpg">
+            <img src="<?= $info['pro_tec_params'] ?>">
         </div>
         
     </div>

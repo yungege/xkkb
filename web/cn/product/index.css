@@ -80,7 +80,7 @@
     -o-transform: scale(1.1);
 }
 .product-li-left img{
-    width: 100%;
+    /*width: 100%;*/
     height: 100%;
     transition-property: transform;
     -webkit-transition-property: -webkit-transform;
@@ -154,9 +154,9 @@
     overflow: hidden;
     text-align: center;
 }
-.product-page-more ul{
+/*.product-page-more ul{
     list-style: none;
 }
 .product-page-more ul li{
     float: left;
-}
+}*/
