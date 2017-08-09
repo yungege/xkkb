@@ -87,4 +87,9 @@ class Category extends ActiveRecord {
         return Yii::$app->db->createCommand($sql)->queryAll();
     }
 
+    public function getCategoryInfoByIds(array $ids){
+        $sql = "SELECT id,pid,cate_name FROM `category` WHERE `id` IN (".implode(',',$ids).") AND `status` = 1";
+        return Yii::$app->db->createCommand($sql)->queryAll();
+    }
+
 }

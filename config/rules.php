@@ -12,6 +12,7 @@
         'zh_cn'                     => 'cn/index/index',
         'zh_cn/aboult'              => 'cn/index/aboult',
         'zh_cn/product'             => 'cn/product/index',
+        'zh_cn/product/search'      => 'cn/product/search',
         'zh_cn/product/<id:\d+>'    => 'cn/product/detail',
         'zh_cn/product/more/<ca_f:\d+>/<ca_s:\d+>'    => 'cn/product/seclist',
         'zh_cn/news'                => 'cn/news/index',

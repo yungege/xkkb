@@ -135,4 +135,59 @@ class ProductController extends BaseController
         
     }
 
+    public function actionSearch(){
+        $list = [];
+        $pageSize = 12;
+        $count = 0;
+        
+        $get = Yii::$app->request->get();
+        $kw = trim($get['kw']);
+        $pn = (!is_numeric($get['page']) || (int)$get['page'] <= 0) ? 1 : $get['page'];
+        $offset = ($pn - 1) * $pageSize;
+
+        if(!empty($kw)){
+            $kw = addslashes(htmlspecialchars($this->filterKeyword($kw)));
+        
+            $count = $this->productModel->searchProCount($kw);
+            if($count > 0){
+                $list = $this->productModel->searchPro($kw, $offset, $pageSize);
+            }
+        }
+
+        $pages = new Pagination([
+            'totalCount' => $count,
+            'pageSize' => $pageSize,
+        ]);
+
+        if(!empty($list)){
+            $fids = array_unique(array_column($list, 'pro_first_type'));
+            $sids = array_unique(array_column($list, 'pro_second_type'));
+
+            $fList = array_column($this->categoryModel->getCategoryInfoByIds($fids), null, 'id');
+            $sList = array_column($this->categoryModel->getCategoryInfoByIds($sids), null, 'id');
+
+            foreach ($list as &$lv) {
+                $lv['f_name'] = $fList[$lv['pro_first_type']]['cate_name'];
+                $lv['s_name'] = $sList[$lv['pro_second_type']]['cate_name'];
+            }
+        }
+
+        $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(1);
+
+        return $this->render('search', [
+            'pages' => $pages,
+            'category_list' => $firstLevelMeau,
+            'list' => $list,
+            'kw' => $kw,
+        ]);
+
+    }
+
+    private function filterKeyword($string) { 
+        $keyword = 'select|insert|update|delete|\'|\/\*|\*|\.\.\/|\.\/|union|and|union|order|or|into|load_file|outfile';
+        $arr = explode('|', $keyword);
+        $result = str_ireplace($arr, '', $string);
+        return $result;
+    }
+
 }

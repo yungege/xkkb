@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>很抱歉，此页面暂时找不到！</title>
+<title>PAGE NOT FOUND</title>
 <meta charset="utf-8">
 <style type="text/css">
     body {

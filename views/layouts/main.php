@@ -264,6 +264,7 @@ AppAsset::register($this);
                 this.showDialog();
                 this.hideDialog();
                 this.postData();
+                this.search();
             },
             getDom:function(){
                 this.form = $('form[name=cont-form]');
@@ -276,6 +277,8 @@ AppAsset::register($this);
                 this.descInt = $('#desc');
                 this.formArea = $('.fix-contact');
                 this.closeBtn = $('#clo');
+                this.searchBtn = $('.fa-search');
+                this.searchVal = $('input[name=search]');
             },
             showDialog: function(){
                 var me = this;
@@ -306,6 +309,16 @@ AppAsset::register($this);
                         }
                         return false;
                     });
+                });
+            },
+
+            search: function(){
+                var me = this;
+                me.searchBtn.unbind().bind('click', function(){
+                    var words = $.trim(me.searchVal.val());
+                    if(!words) return false;
+
+                    window.location.href = '/zh_cn/product/search?kw='+words;
                 });
             },
         };
