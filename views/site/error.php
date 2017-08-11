@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>PAGE NOT FOUND</title>
+<link rel="icon" href="/imgs/favicon.ico" type="image/x-icon"/>
 <meta charset="utf-8">
 <style type="text/css">
     body {
@@ -79,7 +81,7 @@
         </font>
         <br><br>
         <div class="button">
-            <a href="/" title="进入官网" target="_blank">进入官网</a>
+            <a href="/" title="进入官网">进入官网</a>
         </div>
     </div>
 

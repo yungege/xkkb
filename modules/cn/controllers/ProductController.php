@@ -179,6 +179,8 @@ class ProductController extends BaseController
             'category_list' => $firstLevelMeau,
             'list' => $list,
             'kw' => $kw,
+            'count' => $count,
+            'pageCount' => ceil($count/$pageSize),
         ]);
 
     }

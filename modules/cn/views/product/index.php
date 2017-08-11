@@ -31,7 +31,7 @@ $this->title = '产品展示';
     <?php foreach ($list as $lrow): ?>
     <div class="product-list">
         <p class="product-title">
-            <a href=""><?= Html::encode($lrow['cate_name']) ?></a>
+            <a href="/zh_cn/product/more/<?= $lrow['pid'] ?>/<?= $lrow['id'] ?>?lang=zh_cn&ver=<?= microtime(true) ?>"><?= Html::encode($lrow['cate_name']) ?></a>
         </p>
 
         <div class="product-cj">

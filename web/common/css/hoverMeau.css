@@ -12,12 +12,12 @@
     text-align: center;
     display: block;
     text-decoration: none;
-    border-bottom: 0;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    border-bottom: 5px solid #fff;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 }
 .product-inner-item .product-inner-item-icon{
     width: 100%;

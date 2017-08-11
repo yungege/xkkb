@@ -28,7 +28,7 @@ $this->title = '搜索:'.$kw;
 
     <div class="product-list">
         <p class="product-title">
-            <a href=""><?= '搜索:'.$kw ?></a>
+            <a href="javascript:void(0)">搜索:&nbsp;<span style="color:#6fafe8;"><?= $kw ?></span> &emsp;&emsp;共找到:&nbsp;<span style="color:#6fafe8;"><?= $count ?></span> 条信息</a>
         </p>
 
         <div class="product-cj">
