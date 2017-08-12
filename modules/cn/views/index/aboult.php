@@ -11,7 +11,6 @@
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/widget/mslider/css/masterslider.main.css");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/mslider/js/modernizr-2.6.2.min.js");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/mslider/js/masterslider.min.js");
-    AppAsset::addScript($this, Yii::$app->request->baseUrl."/widget/mslider/js/jquery.easing.min.js");
 
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/aboult/index.js");
 
@@ -201,29 +200,8 @@
                             <img class="ms-thumb" src="<?= $pic['thumb'] ?>" alt="thumb" /> 
                         </div>
                     <?php endforeach ?>
-                    <!-- <div class="ms-slide">
-                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/>
-                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" />
-                    </div>
-                    <div class="ms-slide">
-                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/> 
-                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" /> 
-                    </div>
-                    <div class="ms-slide"> 
-                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/> 
-                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" /> 
-                    </div>
-                    <div class="ms-slide"> 
-                        <img src="/widget/mslider/masterslider/loading-2.gif" data-src="/widget/mslider/images/big/zlrz.jpg" alt="lorem ipsum dolor sit"/> 
-                        <img class="ms-thumb" src="/widget/mslider/images/zlrz.jpg" alt="thumb" /> 
-                    </div> -->
                 </div>
-                <!-- end of masterslider --> 
             </div>
         </div>
     </div>
-</div>
-
-<div class="fix-go-top">
-    Top
 </div>

@@ -235,6 +235,15 @@ AppAsset::register($this);
         </form>
     </div>
 </div>
+
+<!-- 侧边固定菜单 -->
+<div class="fix-right-wrmp">
+    <ul>
+        <li class="fix-go-top">Top</li>
+        <li class="fix-at-me">@Me</li>
+    </ul>
+</div>
+
 <?php $this->endBody() ?>
 <script>
     !(function(){
@@ -265,6 +274,8 @@ AppAsset::register($this);
                 this.hideDialog();
                 this.postData();
                 this.search();
+                this.showOrHideTopBtn();
+                this.getDialog();
             },
             getDom:function(){
                 this.form = $('form[name=cont-form]');
@@ -279,6 +290,8 @@ AppAsset::register($this);
                 this.closeBtn = $('#clo');
                 this.searchBtn = $('.fa-search');
                 this.searchVal = $('input[name=search]');
+                this.toTop = $('.fix-go-top');
+                this.showAtMe = $('.fix-at-me');
             },
             showDialog: function(){
                 var me = this;
@@ -320,6 +333,32 @@ AppAsset::register($this);
 
                     window.location.href = '/zh_cn/product/search?kw='+words;
                 });
+            },
+
+            showOrHideTopBtn: function(){
+                var me = this;
+                
+                $(window).scroll(function(){
+                    var sc = $(window).scrollTop();
+                    if(sc >= 520){
+                        me.toTop.show();
+                    }
+                    else{
+                        me.toTop.hide();
+                    }
+                });
+
+                me.toTop.unbind().bind('click', function(){
+                    $('body,html').animate({scrollTop:0},1000,'easeInOutQuart');
+                });
+                
+            },
+
+            getDialog: function(){
+                var me = this;
+                me.showAtMe.unbind().bind('click', function(){
+                    me.showBtn.trigger('click');
+                })
             },
         };
 

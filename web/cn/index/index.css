@@ -53,10 +53,17 @@
     height: 184px;
     overflow: hidden;
     z-index: 11;
-    transition: all 0.4s ease;
+    /*transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;*/
+}
+.pro-list-div:hover .pic{
+    /*bottom: 110px;*/
+    /*box-shadow: 0px 5px 15px rgba(0,0,0,0.4);*/
+    /*-moz-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+    -o-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);*/
 }
 .pro-list-div .pic h4{
     color: white;
@@ -69,13 +76,6 @@
     position: absolute;
     bottom: 20px;
     left: 0;
-}
-.pro-list-div:hover .pic{
-    bottom: 110px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
-    -o-box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
 }
 .pro-list-div .pic img{
     min-width: 292px;

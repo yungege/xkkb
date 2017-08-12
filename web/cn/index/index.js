@@ -3,16 +3,17 @@ var HoverImg = {
     init: function (){
         this.getDom();
         this.changeImg();
+        this.topPos();
     },
 
     getDom: function (){
         this.picLis = $('.pic-content ul li');
+        this.picCover = $('.pro-list-div');
     },
 
     changeImg: function (){
-        var me = this;
-
-        var timer = null;
+        var me = this,
+            timer = null;
         me.picLis.unbind().bind('mouseenter', function(){
             var ms = 1,
                 picArea = $(this).parent().parent().prev().children('img'),
@@ -35,6 +36,30 @@ var HoverImg = {
                 
             }, 250);
             
+        });
+    },
+
+    topPos: function(){
+        var me = this;
+            
+        me.picCover.unbind().bind('mouseenter', function(){
+            var picDiv = $(this).children('.pic');
+            picDiv.stop().animate({
+                'bottom': '110px',
+            },{ 
+                easing: 'easeOutExpo', 
+                duration: 600,
+            });
+            
+        }).bind('mouseleave', function(){
+            var picDiv = $(this).children('.pic');
+            picDiv.stop().animate({
+                'bottom': '0px',
+            },{ 
+                easing: 'easeOutExpo', 
+                duration: 600,
+            });
+                    
         });
     },
 

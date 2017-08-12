@@ -149,25 +149,3 @@
     background-color: #fff;
     /*border: 1px solid #ccc;*/
 }
-
-.fix-go-top{
-    position: fixed;
-    top: 30%;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ccc;
-    text-align: center;line-height: 50px;
-    cursor: pointer;
-    display: none;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-}
-.fix-go-top:hover{
-    background-color: #6fafe8;
-    color: white;
-    border-color: white;
-}

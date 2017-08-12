@@ -21,6 +21,7 @@ class AppAsset extends AssetBundle
         // 'css/site.css',
     ];
     public $js = [
+        '/widget/mslider/js/jquery.easing.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
