@@ -157,10 +157,10 @@ AppAsset::register($this);
                 <h5>应用案例</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="zh_cn/case">机房应用</a>
+                        <a href="/zh_cn/case">机房应用</a>
                     </li>
                     <li>
-                        <a href="zh_cn/case">监控应用</a>
+                        <a href="/zh_cn/case">监控应用</a>
                     </li>
                 </ul>
             </div>

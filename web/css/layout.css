@@ -247,12 +247,16 @@ body{
     background-color: #6fafe8;
 }
 .meaus-wrap-hide{
-    width: 1920px;
-    height: 0px;
+    /*width: 100%;*/
+    width: 1200px;
+    /*width: 1920px;*/
+    height: 0;
     overflow: hidden;
     position: relative;
     background-color: rgba(255,255,255,0.5);
-    margin: 0px -460px 0;
+    /*background-color: black;*/
+    /*margin: 0px -460px 0;*/
+    margin-left: -100px;
 
     transition: height 0.3s ease;
     -webkit-transition: height 0.3s ease;
