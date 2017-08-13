@@ -276,6 +276,7 @@ AppAsset::register($this);
                 this.search();
                 this.showOrHideTopBtn();
                 this.getDialog();
+                this.selectLang();
             },
             getDom:function(){
                 this.form = $('form[name=cont-form]');
@@ -292,6 +293,7 @@ AppAsset::register($this);
                 this.searchVal = $('input[name=search]');
                 this.toTop = $('.fix-go-top');
                 this.showAtMe = $('.fix-at-me');
+                this.selectLangBtn = $('select[name=lang]');
             },
             showDialog: function(){
                 var me = this;
@@ -359,6 +361,16 @@ AppAsset::register($this);
                 me.showAtMe.unbind().bind('click', function(){
                     me.showBtn.trigger('click');
                 })
+            },
+
+            selectLang: function(){
+                var me = this;
+                me.selectLangBtn.unbind().bind('change', function(){
+                    var lang = $(this).val(),
+                        url = window.location.href;
+                    url = url.replace('zh_cn', lang);
+                    window.location.href = url;
+                });
             },
         };
 

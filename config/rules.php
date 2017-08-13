@@ -26,6 +26,20 @@
         '/cont'                     => 'cn/index/cont',
 
         // English模块
-        'en'                => 'en/index/index',
+        'en'                        => 'en/index/index',
+        'en/aboult'                 => 'en/index/aboult',
+        'en/product'                => 'en/product/index',
+        'en/product/search'         => 'en/product/search',
+        'en/product/<id:\d+>'       => 'en/product/detail',
+        'en/product/more/<ca_f:\d+>/<ca_s:\d+>'    => 'en/product/seclist',
+        'en/news'                   => 'en/news/index',
+        'en/news/<id:\d+>'          => 'en/news/detail',
+        'en/support'                => 'en/support/index',
+        'en/support/<id:\d+>'       => 'en/support/detail',
+        'en/support/service'        => 'en/support/service',
+        'en/contact'                => 'en/contact/index',
+        'en/case'                   => 'en/case/index',
+        'en/case/<id:\d+>'          => 'en/case/detail',
+        'en/cont'                   => 'en/index/cont',
     ];
 ?>
