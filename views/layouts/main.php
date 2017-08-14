@@ -368,6 +368,10 @@ AppAsset::register($this);
                 me.selectLangBtn.unbind().bind('change', function(){
                     var lang = $(this).val(),
                         url = window.location.href;
+                    if(url.indexOf('zh_cn') == -1){
+                        window.location.href = url+lang;
+                        return;
+                    }
                     url = url.replace('zh_cn', lang);
                     window.location.href = url;
                 });

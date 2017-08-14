@@ -12,6 +12,56 @@ body{
     position: relative;
 }
 
+/*下拉菜单开始*/
+.meaus-wrap{
+    width: 840px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.meaus-wrap-meau{
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+}
+.meaus-wrap-meau > a{
+    color: #000000;
+    display: inline-block;
+    width: 115.4px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.meaus-wrap-meau > a:hover{
+    color: #ffffff;
+    background-color: #6fafe8;
+}
+.meaus-wrap-hide{
+    /*width: 100%;*/
+    width: 1200px;
+    /*width: 1920px;*/
+    height: 209px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(255,255,255,0.5);
+    /*background-color: black;*/
+    /*margin: 0px -460px 0;*/
+    margin-left: -100px;
+
+    transition: height 0.3s ease;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    -ms-transition: height 0.3s ease;
+    -o-transition: height 0.3s ease;
+}
+.meaus-wrap-show{
+    height: 209px;
+}
+
 .fix-meau-ul{
     list-style-type: none;
     text-align: center;
@@ -27,6 +77,7 @@ body{
     list-style-type: none;
     display: inline-block;
     margin-right: 52px;
+    vertical-align: top;
 }
 .fix-meau-ul > li > a{
     display: inline-block;
@@ -47,7 +98,7 @@ body{
     vertical-align: middle;
     padding-right: 5px;
 }
-
+/*下拉菜单结束*/
 
 .header{
     width: 1200px;
@@ -217,55 +268,6 @@ body{
 .ewm{
     margin-top: 10px;
     margin-left: 105px;
-}
-
-.meaus-wrap{
-    width: 840px;
-    height: 70px;
-    position: absolute;
-    top: 0;
-    left: 100px;
-}
-.meaus-wrap-meau{
-    width: 100%;
-    height: 100%;
-    line-height: 70px;
-}
-.meaus-wrap-meau > a{
-    color: #000000;
-    display: inline-block;
-    width: 115.4px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-.meaus-wrap-meau > a:hover{
-    color: #ffffff;
-    background-color: #6fafe8;
-}
-.meaus-wrap-hide{
-    /*width: 100%;*/
-    width: 1200px;
-    /*width: 1920px;*/
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    background-color: rgba(255,255,255,0.5);
-    /*background-color: black;*/
-    /*margin: 0px -460px 0;*/
-    margin-left: -100px;
-
-    transition: height 0.3s ease;
-    -webkit-transition: height 0.3s ease;
-    -moz-transition: height 0.3s ease;
-    -ms-transition: height 0.3s ease;
-    -o-transition: height 0.3s ease;
-}
-.meaus-wrap-show{
-    height: 200px;
 }
 
 /*菜单激活样式*/

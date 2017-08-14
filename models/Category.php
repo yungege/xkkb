@@ -28,10 +28,10 @@ class Category extends ActiveRecord {
     public function rules()
     {
         return [
-            [['type','pid', 'catename', 'cate_icon','cate_hover_icon','cate_sort','status'], 'required', 'message'=> '数据填写有误！'],
+            [['type','pid', 'cate_name', 'en_cate_name', 'cate_icon','cate_hover_icon','cate_sort','status'], 'required', 'message'=> '数据填写有误！'],
             [['pid','cate_sort','status','ctime','cate_level','type'], 'integer'],
-            ['catename', 'string', 'max'=>12],
-            [['cate_icon','cate_hover_icon'], 'string', 'max'=>255],
+            ['cate_name', 'string', 'max'=>12],
+            [['cate_icon','cate_hover_icon','en_cate_name'], 'string', 'max'=>255],
             [['cate_desc','admin_id'], 'safe'],
         ];
     }
@@ -39,10 +39,10 @@ class Category extends ActiveRecord {
     public function scenarios()
     {
         return [
-            'createFirstLeval' => ['type','catename','cate_icon','cate_hover_icon','cate_sort'],
-            'createSecondLeval' => ['pid','catename','cate_level'],
-            'updateFirstLeval' => ['type','pid','catename','cate_icon','cate_hover_icon','cate_sort','status','cate_level'],
-            'updateSecondLeval' => ['pid','catename','status','cate_level'],
+            'createFirstLeval' => ['type','cate_name','en_cate_name','cate_icon','cate_hover_icon','cate_sort'],
+            'createSecondLeval' => ['pid','cate_name','en_cate_name','cate_level'],
+            'updateFirstLeval' => ['type','pid','cate_name','en_cate_name','cate_icon','cate_hover_icon','cate_sort','status','cate_level'],
+            'updateSecondLeval' => ['pid','cate_name','en_cate_name','status','cate_level'],
         ];
     }
 
@@ -52,6 +52,7 @@ class Category extends ActiveRecord {
             'id'                => '',
             'pid'               => '',
             'cate_name'         => '',
+            'en_cate_name'      => '',
             'cate_icon'         => '',
             'cate_hover_icon'   => '',
             'cate_desc'         => '',
@@ -83,12 +84,12 @@ class Category extends ActiveRecord {
     }
 
     public function getSecondLevelCategoryById(int $id, int $offset = 0, int $limit = 3){
-        $sql = "SELECT id,pid,cate_name FROM `category` WHERE `pid`= {$id} AND `status` = 1 AND `cate_level` = 2 ORDER BY `id` ASC LIMIT {$offset},{$limit}";
+        $sql = "SELECT id,pid,cate_name,en_cate_name FROM `category` WHERE `pid`= {$id} AND `status` = 1 AND `cate_level` = 2 ORDER BY `id` ASC LIMIT {$offset},{$limit}";
         return Yii::$app->db->createCommand($sql)->queryAll();
     }
 
     public function getCategoryInfoByIds(array $ids){
-        $sql = "SELECT id,pid,cate_name FROM `category` WHERE `id` IN (".implode(',',$ids).") AND `status` = 1";
+        $sql = "SELECT id,pid,cate_name,en_cate_name FROM `category` WHERE `id` IN (".implode(',',$ids).") AND `status` = 1";
         return Yii::$app->db->createCommand($sql)->queryAll();
     }
 

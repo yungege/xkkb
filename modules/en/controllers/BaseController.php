@@ -12,10 +12,20 @@ class BaseController extends Controller
     
     public function init()
     {
+        $module = Yii::$app->controller->module->id;
         $meauList = (new Meau)->getMeauList();
         foreach ($meauList as &$row) {
+            $row['url'] = str_replace('zh_cn', 'en', $row['url']);
             if(!empty($row['show'])){
                 $row['show'] = unserialize($row['show']);
+                foreach ($row['show'] as &$sval) {
+                    if(strpos($sval['link'],'zh_cn') === false){
+                        $sval['link'] .= '/en';
+                    }
+                    else{
+                        $sval['link'] = str_replace('zh_cn', 'en', $sval['link']);
+                    }
+                }
             }
         }
 

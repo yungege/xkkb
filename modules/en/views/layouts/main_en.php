@@ -42,6 +42,14 @@ AppAsset::register($this);
 
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <style type="text/css">
+        body{
+            font-family: "ProximaNova,Arial,Sans-serif";
+        }
+        .footer-meau > div{
+            margin-right: 60px;
+        }
+    </style>
     <?php $this->head() ?>
 </head>
 <body>
@@ -67,7 +75,7 @@ AppAsset::register($this);
                 <?php foreach ($meauLayout as $key => $row): ?>
                     <?php if($key < 7): ?>
                     <a href="<?= $row['url'] ?>" class="<?= $key == $this->params['activeMeau'] ? 'layout-meau-active' : '' ?>">
-                        <?= $row['meau'] ?>
+                        <?= $row['en_meau'] ?>
                     </a>
                     <?php endif ?>
                 <?php endforeach ?>
@@ -85,7 +93,7 @@ AppAsset::register($this);
                                     else{
                                         $margin = '';
                                     }
-                                    $li =  '<li style="'.$margin.'"><a href="'.$sRow['link'].'"><img src="'.$sRow['url'].'" width="100" height="120"><div><i>*</i><span>'.Html::encode($sRow['title']).'</span></div></a></li>';
+                                    $li =  '<li style="'.$margin.'"><a href="'.$sRow['link'].'"><img src="'.$sRow['url'].'" width="100" height="120"><div><span style="display:inline-block;line-height:18px;padding-top:15px;width:100px;">'.Html::encode($sRow['en_title']).'</span></div></a></li>';
                                      $ul .= $li;
                                 }
                             }
@@ -111,88 +119,88 @@ AppAsset::register($this);
     <div class="footer-wrap">
         <div class="footer-meau">
             <div class="about">
-                <h5>关于我们</h5>
+                <h5>About us</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="/en/aboult">公司简介</a>
+                        <a href="/en/aboult">Company</a>
                     </li>
                     <li>
-                        <a href="/en/aboult">公司文化</a>
+                        <a href="/en/aboult">Culture</a>
                     </li>
                     <li>
-                        <a href="/en/aboult">相关资源</a>
+                        <a href="/en/aboult">Related resources</a>
                     </li>
                 </ul>
             </div>
             <div class="product">
-                <h5>产品展示</h5>
+                <h5>Product</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="/en/product">室外光缆系列</a>
+                        <a href="/en/product">Outdoor Optical Fiber Cable</a>
                     </li>
                     <li>
-                        <a href="/en/product?lang=en&ver=1501994100.6915&ca_f=2">室内光缆系列</a>
+                        <a href="/en/product?lang=en&ver=1501994100.6915&ca_f=2">Indoor Optical Fiber Cable</a>
                     </li>
                     <li>
-                        <a href="/en/product?lang=en&ver=1501994259.8186&ca_f=3">数据中心系列</a>
+                        <a href="/en/product?lang=en&ver=1501994259.8186&ca_f=3">Datasheet Center</a>
                     </li>
                     <li>
-                        <a href="/en/product?lang=en&ver=1501994278.4116&ca_f=4">光纤入户系列</a>
+                        <a href="/en/product?lang=en&ver=1501994278.4116&ca_f=4">FTTH</a>
                     </li>
                     <li>
-                        <a href="/en/product?lang=en&ver=1501994299.8783&ca_f=5">光纤跳线系列</a>
+                        <a href="/en/product?lang=en&ver=1501994299.8783&ca_f=5">Optical Patch Cord</a>
                     </li>
                     <li>
-                        <a href="/en/product?lang=en&ver=1501994301.5977&ca_f=6">光传输设备</a>
+                        <a href="/en/product?lang=en&ver=1501994301.5977&ca_f=6">Optical Transmission Equipment</a>
                     </li>
                     <li>
-                        <a href="/en/product?lang=en&ver=1501994308.7209&ca_f=7">综合布线</a>
+                        <a href="/en/product?lang=en&ver=1501994308.7209&ca_f=7">Integrated Wiring</a>
                     </li>
                     <li>
-                        <a href="/en/product?lang=en&ver=1501994314.445&ca_f=8">安防监控</a>
+                        <a href="/en/product?lang=en&ver=1501994314.445&ca_f=8">Security Monitoring</a>
                     </li>
                 </ul>
             </div>
             <div class="show">
-                <h5>应用案例</h5>
+                <h5>Application</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="/en/case">机房应用</a>
+                        <a href="/en/case">Data Center</a>
                     </li>
                     <li>
-                        <a href="/en/case">监控应用</a>
+                        <a href="/en/case">Monitoring</a>
                     </li>
                 </ul>
             </div>
             <div class="show">
-                <h5>技术支持</h5>
+                <h5>Supporing</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="/en/support">解决方案</a>
+                        <a href="/en/support">Solution</a>
                     </li>
                     <li>
-                        <a href="/en/support/service?lang=en&ver=1501994359.7889&ca_f=12">客户服务</a>
+                        <a href="/en/support/service?lang=en&ver=1501994359.7889&ca_f=12">Service</a>
                     </li>
                 </ul>
             </div>
             <div class="news">
-                <h5>新闻中心</h5>
+                <h5>News</h5>
                 <ul class="footer-ul">
                     <li>
-                        <a href="/en/news">行业新闻</a>
+                        <a href="/en/news">Industry News</a>
                     </li>
                     <li>
-                        <a href="/en/news?lang=en&ver=1501994391.4437&ca_f=10">新科凯邦</a>
+                        <a href="/en/news?lang=en&ver=1501994391.4437&ca_f=10">Company News</a>
                     </li>
                 </ul>
             </div>
             <div class="contact">
-                <h5 style="width: 54px;">联系我们</h5>
+                <h5 style="width: 54px;">Contact</h5>
                 <ul class="footer-ul">
-                    <li style="color:#6fafe8;" id="show-div">立即留言</li>
+                    <li style="color:#6fafe8;" id="show-div">Leaving Message</li>
                 </ul>
                 <div class="phone">
-                    <span>全国服务热线：</span>
+                    <span>Hotline：</span>
                     <a href="tel:010-62633320">010-62633320</a>
                     <p class="ewm">
                         <img src="/imgs/ewm.jpg" width="120">
@@ -203,9 +211,9 @@ AppAsset::register($this);
         </div>
     </div>
     <div class="common-info">
-        <p>地址：北京市昌平区马池口两岸共盈工业园西二区</p>
-        <p>北京新科凯邦科技有限公司&emsp;版权所有&emsp;京ICP备14060324号-2</p>
-        <p>电话：010-62633320&emsp;手机：13031060853&emsp;传真：010-62611638</p>
+        <p>Address：Changping District, Beijing,Machikou Industrial Park on both sides of the Straits</p><!-- 北京市昌平区马池口两岸共盈工业园西二区 -->
+        <p>Beijing Xinkekaibang Technology Co. Ltd.&emsp;Copyright&emsp;京ICP备14060324号-2</p>
+        <p>Tel：010-62633320&emsp;Mobile：13031060853&emsp;Fax：010-62611638</p>
     </div>
 </div>
 <div class="fix-contact">
@@ -230,8 +238,8 @@ AppAsset::register($this);
             <div class="int-div">
                 <textarea rows="4" name="desc" id="desc" placeholder="选择成就未来 财富就此开始"></textarea>
             </div>
-            <button type="button" id="sub">发&nbsp;送</button>
-            <button type="button" id="clo">取&nbsp;消</button>
+            <button type="button" id="sub">Send</button>
+            <button type="button" id="clo">Close</button>
         </form>
     </div>
 </div>
