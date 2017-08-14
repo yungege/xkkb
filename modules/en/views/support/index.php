@@ -42,8 +42,10 @@
         <?=
             LinkPager::widget([
                 'pagination' => $pages,
-                'nextPageLabel' => 'N',
-                'prevPageLabel' => 'L',
+                'nextPageLabel' => '>>', 
+                'prevPageLabel' => '<<',
+                'firstPageLabel' => 'First', 
+                'lastPageLabel' => 'Last',
                 'options' => ['class' => 'xkkb-pagination'],
             ]);
         ?>

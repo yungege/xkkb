@@ -212,7 +212,7 @@ AppAsset::register($this);
     </div>
     <div class="common-info">
         <p>Address：Changping District, Beijing,Machikou Industrial Park on both sides of the Straits</p><!-- 北京市昌平区马池口两岸共盈工业园西二区 -->
-        <p>Beijing Xinkekaibang Technology Co. Ltd.&emsp;Copyright&emsp;京ICP备14060324号-2</p>
+        <p>Beijing Xinke Kaibang Technology Co. Ltd.&emsp;Copyright&emsp;京ICP备14060324号-2</p>
         <p>Tel：010-62633320&emsp;Mobile：13031060853&emsp;Fax：010-62611638</p>
     </div>
 </div>

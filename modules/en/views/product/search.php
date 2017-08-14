@@ -19,7 +19,7 @@ $this->title = '搜索:'.$kw;
 <div class="product-wrap">
     <div class="product-meau">
         <?php foreach ($category_list as $fcl) : ?>
-            <a class="product-inner-item" data-active="<?= $fcl['id'] == $active_category ? 1 : 0 ?>" data-icon="<?= $fcl['cate_icon'] ?>" data-houver-icon="<?= $fcl['cate_hover_icon'] ?>" href="/en/product?lang=en&ver=<?= microtime(true) ?>&ca_f=<?= $fcl['id'] ?>" style="height:115px;<?= $fcl['id'] == $active_category ? 'border-bottom: 5px solid #6fafe8;' : ''; ?>">
+            <a class="product-inner-item" data-active="<?= $fcl['id'] == $active_category ? 1 : 0 ?>" data-icon="<?= $fcl['cate_icon'] ?>" data-houver-icon="<?= $fcl['cate_hover_icon'] ?>" href="/en/product?lang=en&ver=<?= microtime(true) ?>&ca_f=<?= $fcl['id'] ?>" style="height:95px;<?= $fcl['id'] == $active_category ? 'border-bottom: 5px solid #6fafe8;' : ''; ?>">
                 <div class="product-inner-item-icon" style="background: url(<?= $fcl['id'] == $active_category ? $fcl['cate_hover_icon'] : $fcl['cate_icon']; ?>) no-repeat center;"></div>
                 <p style="width:100px;color: <?= $fcl['id'] == $active_category ? '#6fafe8;' : '#656565;'; ?>"><?= $fcl['en_cate_name'] ?></p>
             </a>
@@ -56,10 +56,10 @@ $this->title = '搜索:'.$kw;
     <div class="product-page-more">
         <?= LinkPager::widget([
                 'pagination' => $pages,
-                'nextPageLabel' => 'L', 
-                'prevPageLabel' => 'N',
-                'firstPageLabel' => '首页', 
-                'lastPageLabel' => '尾页',
+                'nextPageLabel' => '>>', 
+                'prevPageLabel' => '<<',
+                'firstPageLabel' => 'First', 
+                'lastPageLabel' => 'Last',
                 'options' => ['class' => 'xkkb-pagination'],
             ]);
         ?>
