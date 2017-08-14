@@ -220,11 +220,11 @@ AppAsset::register($this);
     <div class="fix-contact-inner">
         <form name="cont-form">
             <div class="int-div">
-                <input type="text" name="name" id="name" placeholder="姓名">
+                <input type="text" name="name" id="name" placeholder="Name">
                 <span class="int-name"></span>
             </div>
             <div class="int-div">
-                <input type="text" name="mobile" id="mobile" placeholder="手机 (必填)">
+                <input type="text" name="mobile" id="mobile" placeholder="Mobile (Must)">
                 <span class="int-mobile"></span>
             </div>
             <div class="int-div">
@@ -232,11 +232,11 @@ AppAsset::register($this);
                 <span class="int-email"></span>
             </div>
             <div class="int-div">
-                <input type="text" name="address" id="address" placeholder="地址">
+                <input type="text" name="address" id="address" placeholder="Addr">
                 <span class="int-addr"></span>
             </div>
             <div class="int-div">
-                <textarea rows="4" name="desc" id="desc" placeholder="选择成就未来 财富就此开始"></textarea>
+                <textarea rows="4" name="desc" id="desc" placeholder="Leaving Your Message"></textarea>
             </div>
             <button type="button" id="sub">Send</button>
             <button type="button" id="clo">Close</button>
