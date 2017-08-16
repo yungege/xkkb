@@ -62,13 +62,12 @@ AppAsset::register($this);
         <div class="xkkb-meau">
             <div class="logo"><a href="/zh_cn"><img src="/imgs/logo.png"></a></div>
 
-            <div class="meaus-wrap" data-show="<?= (int)$this->params['show'] ?>">
+            <div class="meaus-wrap">
                 <div class="meaus-wrap-meau">
                 <?php foreach ($meauLayout as $key => $row): ?>
                     <?php if($key < 7): ?>
                     <a href="<?= $row['url'] ?>" class="<?= $key == $this->params['activeMeau'] ? 'layout-meau-active' : '' ?>">
                         <?= $row['meau'] ?>
-                        <div style="width: 100%;min-width: 1200px;height: 209px;border: 1px solid red;position: absolute;top: 70px;left: 0;"></div>
                     </a>
                     <?php endif ?>
                 <?php endforeach ?>
@@ -263,6 +262,13 @@ AppAsset::register($this);
             var className = 'fix-meau-ul-' + (i+1);
 
             $(this).unbind().bind('mouseenter', function(){
+                var chlidrenLength = $('#'+className).children().length;
+                if(chlidrenLength == 0){
+                    meausWrap.removeClass('meaus-wrap-show');
+                    return false;
+                }
+
+                meausWrap.addClass('meaus-wrap-show');
                 $('.fix-meau-ul').fadeOut(0);
                 $('#'+className).fadeIn(200);
             })
