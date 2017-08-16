@@ -269,6 +269,13 @@ AppAsset::register($this);
             var className = 'fix-meau-ul-' + (i+1);
 
             $(this).unbind().bind('mouseenter', function(){
+                var chlidrenLength = $('#'+className).children().length;
+                if(chlidrenLength == 0){
+                    meausWrap.removeClass('meaus-wrap-show');
+                    return false;
+                }
+                meausWrap.addClass('meaus-wrap-show');
+
                 $('.fix-meau-ul').fadeOut(0);
                 $('#'+className).fadeIn(200);
             })

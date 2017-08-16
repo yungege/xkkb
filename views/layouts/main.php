@@ -249,8 +249,7 @@ AppAsset::register($this);
     !(function(){
         var overArea = $('.meaus-wrap'),
             meaus = $('.meaus-wrap-meau a'),
-            meausWrap = $('.meaus-wrap-hide'),
-            isShow = $('.meaus-wrap').attr('data-show');
+            meausWrap = $('.meaus-wrap-hide');
 
         overArea.unbind().bind('mouseenter', function(){
             meausWrap.addClass('meaus-wrap-show');
