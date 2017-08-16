@@ -31,6 +31,9 @@
     <p class="news-time">
         发布时间：<?= date('Y-m-d H:i:s', $info['ctime']) ?>
     </p>
+    <p class="news-desc">
+        <?= Html::encode($info['desc']) ?>
+    </p>
     <div class="news-content">
         <?= $info['content'] ?>
     </div>

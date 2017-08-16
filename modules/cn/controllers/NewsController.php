@@ -65,7 +65,7 @@ class NewsController extends BaseController
 
         $info = News::findOne((int)$get['id']);
 
-        if(null === $info || $info->status != 1) 
+        if(null === $info || $info->status == -9) 
             throw new NotFoundHttpException("Page not found");
 
         $info = $info->toArray();

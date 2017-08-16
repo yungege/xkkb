@@ -1,5 +1,6 @@
 <?php
     use app\assets\AppAsset;
+    use yii\helpers\Html;
     $this->title = '新科凯邦';
 ?>
 <div class="banner-wrap">
@@ -28,7 +29,7 @@
         <div class="pic-content">
             <ul>
                 <?php foreach ($newsList as $news): ?>
-                    <li data-img="<?= $news['cover'] ?>"><a href="/en/news/<?= $news['id'] ?>?ca_f=<?= $news['category'] ?>">•&nbsp;<?= $news['title'] ?></a></li>
+                    <li data-img="<?= $news['cover'] ?>"><a href="/en/news/<?= $news['id'] ?>?ca_f=<?= $news['category'] ?>">•&nbsp;<?= $news['en_title'] ?></a></li>
                 <?php endforeach ?>
                 <li><a href="/en/news"><img src="/cn/index/more.png" alt="More..."></a></li>
             </ul>
@@ -54,7 +55,7 @@
         <div class="pic-content">
             <ul>
                 <?php foreach ($supList as $news): ?>
-                    <li data-img="<?= $news['pic'] ?>"><a href="/en/support/<?= $news['id'] ?>">•&nbsp;<?= $news['title'] ?></a></li>
+                    <li data-img="<?= $news['pic'] ?>"><a href="/en/support/<?= $news['id'] ?>">•&nbsp;<?= Html::encode($news['en_title']) ?></a></li>
                 <?php endforeach ?>
                 <li><a href="/en/support"><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>
@@ -68,7 +69,7 @@
         <div class="pic-content">
             <ul>
                 <?php foreach ($caseList as $case): ?>
-                    <li data-img="<?= $case['cover'] ?>"><a href="/en/case/<?= $case['id'] ?>">•&nbsp;<?= $case['title'] ?></a></li>
+                    <li data-img="<?= $case['cover'] ?>"><a href="/en/case/<?= $case['id'] ?>">•&nbsp;<?= Html::encode($case['title']) ?></a></li>
                 <?php endforeach ?>
                 <li><a href="/en/case"><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>

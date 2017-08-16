@@ -34,8 +34,8 @@
             </dt>
             <dd>
                 <div class="left-dd">
-                    <a target="_blank" href="javascript:void(0)"><?= Html::encode($lrow['title']) ?></a>
-                    <p class="p1"><?= Html::encode($lrow['desc']) ?></p>
+                    <a target="_blank" href="javascript:void(0)"><?= Html::encode($lrow['en_title']) ?></a>
+                    <p class="p1"><?= Html::encode($lrow['en_desc']) ?></p>
                     <p class="p2"><?= date('Y-m-d H:i:s', $lrow['ctime']) ?></p>
                 </div>
                 <div class="dd-more">

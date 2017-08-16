@@ -31,12 +31,12 @@
     <div class="service-detail">
         <p class="service-detail-title"><?= Html::encode($cont['title']) ?></p>
         <div class="service-detail-desc">
-            <h4 class="h4-title">安装环境</h4>
-            <p><?= Html::encode($cont['desc']) ?></p>
+            <h4 class="h4-title">Installation Environment</h4>
+            <p><?= Html::encode($cont['en_desc']) ?></p>
         </div>
         <div class="service-detail-cont">
-            <h4 class="h4-title">解决方案</h4>
-            <div class="service-detail-cont-detail"><?= $cont['content'] ?></div>
+            <h4 class="h4-title">Solution Detail</h4>
+            <div class="service-detail-cont-detail"><?= $cont['en_content'] ?></div>
         </div>
     </div>
 </div>

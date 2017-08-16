@@ -1,6 +1,7 @@
 <?php
     use app\assets\AppAsset;
     use yii\widgets\LinkPager;
+    use yii\helpers\Html;
     
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/support/index.css");
     AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
@@ -30,7 +31,7 @@
     <div class="support-pic">
         <?php foreach ($support_list as $val) : ?>
             <div class="support-pic-list">
-                <span><?= $val['title'] ?></span>
+                <span><?= Html::encode($val['en_title']) ?></span>
                 <a href="/en/support/<?= $val['id'] ?>" target="__blank">
                     <img src="<?= $val['pic'] ?>">
                 </a>

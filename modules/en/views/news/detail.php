@@ -26,12 +26,15 @@
         <?php endforeach ?>
     </div>
     <h4 class="news-title-h4">
-        <?= Html::encode($info['title']) ?>
+        <?= Html::encode($info['en_title']) ?>
     </h4>
     <p class="news-time">
         Time：<?= date('Y-m-d H:i:s', $info['ctime']) ?>
     </p>
+    <p class="news-desc">
+        <?= Html::encode($info['en_desc']) ?>
+    </p>
     <div class="news-content">
-        <?= $info['content'] ?>
+        <?= $info['en_content'] ?>
     </div>
 </div>
