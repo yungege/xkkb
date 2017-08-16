@@ -62,12 +62,13 @@ AppAsset::register($this);
         <div class="xkkb-meau">
             <div class="logo"><a href="/zh_cn"><img src="/imgs/logo.png"></a></div>
 
-            <div class="meaus-wrap">
+            <div class="meaus-wrap" data-show="<?= (int)$this->params['show'] ?>">
                 <div class="meaus-wrap-meau">
                 <?php foreach ($meauLayout as $key => $row): ?>
                     <?php if($key < 7): ?>
                     <a href="<?= $row['url'] ?>" class="<?= $key == $this->params['activeMeau'] ? 'layout-meau-active' : '' ?>">
                         <?= $row['meau'] ?>
+                        <div style="width: 100%;min-width: 1200px;height: 209px;border: 1px solid red;position: absolute;top: 70px;left: 0;"></div>
                     </a>
                     <?php endif ?>
                 <?php endforeach ?>
@@ -247,9 +248,10 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 <script>
     !(function(){
-        var overArea = $('.meaus-wrap');
-        var meaus = $('.meaus-wrap-meau a');
-        var meausWrap = $('.meaus-wrap-hide');
+        var overArea = $('.meaus-wrap'),
+            meaus = $('.meaus-wrap-meau a'),
+            meausWrap = $('.meaus-wrap-hide'),
+            isShow = $('.meaus-wrap').attr('data-show');
 
         overArea.unbind().bind('mouseenter', function(){
             meausWrap.addClass('meaus-wrap-show');

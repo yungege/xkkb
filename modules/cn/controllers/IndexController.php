@@ -36,6 +36,7 @@ class IndexController extends BaseController
     
     public function actionIndex(){
         $this->view->params['activeMeau'] = 0;
+        $this->view->params['show'] = -1;
 
         $bannerList = $this->bannerModel->getBannerList();
         $newsList = $this->newsModel->getTop3News();
