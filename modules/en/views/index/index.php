@@ -42,7 +42,7 @@
         </div>
         <div class="pic-content">
             <ul>
-                <li data-img="/cn/index/2.jpg"><a href="/en/aboult">•&nbsp;新科凯邦 激情欢聚.乐享草原</a></li>
+                <li data-img="/cn/index/2.jpg"><a href="/en/aboult">•&nbsp;Xinke Kaibang Happy gathering.Enjoying grassland</a></li>
                 <!-- <li><a href=""><img src="/cn/index/more.png" alt="更多..."></a></li> -->
             </ul>
         </div>
@@ -69,7 +69,7 @@
         <div class="pic-content">
             <ul>
                 <?php foreach ($caseList as $case): ?>
-                    <li data-img="<?= $case['cover'] ?>"><a href="/en/case/<?= $case['id'] ?>">•&nbsp;<?= Html::encode($case['title']) ?></a></li>
+                    <li data-img="<?= $case['cover'] ?>"><a href="/en/case/<?= $case['id'] ?>">•&nbsp;<?= Html::encode($case['en_title']) ?></a></li>
                 <?php endforeach ?>
                 <li><a href="/en/case"><img src="/cn/index/more.png" alt="更多..."></a></li>
             </ul>

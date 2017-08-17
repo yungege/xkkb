@@ -27,14 +27,14 @@
         <?php endforeach ?>
     </div>
 
-    <h3 class="product-name"><?= Html::encode($info['pro_name']) ?></h3>
+    <h3 class="product-name"><?= Html::encode($info['en_pro_name'] ? : $info['pro_name']) ?></h3>
     <h4 class="product-type"><?= Html::encode($info['pro_model']) ?></h4>
 
     <div class="product-show">
-        <div class="show-left" style="background: url(<?= $info['pro_cover_pic'] ?>) no-repeat left center;">
+        <div class="show-left" style="background: url(<?= $info['en_pro_cover_pic'] ? : $info['pro_cover_pic'] ?>) no-repeat left center;">
             
         </div>
-        <div class="show-right" style="background: url(<?= $info['pro_cover_pic_2'] ?>) no-repeat center center;">
+        <div class="show-right" style="background: url(<?= $info['en_pro_cover_pic_2'] ? : $info['pro_cover_pic_2'] ?>) no-repeat center center;">
 
         </div>
     </div>
@@ -46,10 +46,10 @@
 
     <div class="product-desc">
         <div class="desc-list-div list-div-active">
-            <?= Html::decode($info['pro_desc']) ?>
+            <?= Html::decode($info['en_pro_desc'] ? : $info['pro_desc']) ?>
         </div>
         <div class="desc-list-div">
-            <img src="<?= $info['pro_tec_params'] ?>">
+            <img src="<?= $info['en_pro_tec_params'] ? : $info['pro_tec_params'] ?>">
         </div>
         
     </div>

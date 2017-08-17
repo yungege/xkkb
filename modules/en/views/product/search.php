@@ -42,9 +42,9 @@ $this->title = '搜索:'.$kw;
                     </div>
                     
                     <div class="product-li-right">
-                        <h4><?= $pval['pro_name'] ?></h4>
+                        <h4><?= $pval['en_pro_name'] ? : $pval['pro_name'] ?></h4>
                         <span><i></i>Model：<?= $pval['pro_model'] ?></span><br>
-                        <span><i></i>Laying Method：<?= $pval['pro_fs_type'] ?></span>
+                        <span><i></i>Laying Method：<?= $pval['en_pro_fs_type'] ? : $pval['pro_fs_type'] ?></span>
                     </div>
                     <a href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>" class="product-more">View Details</a>
                 </li>

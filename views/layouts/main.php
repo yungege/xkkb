@@ -99,7 +99,7 @@ AppAsset::register($this);
 
             <div class="search">
                 <i class="fa fa-search" aria-hidden="true"></i>
-                <input type="text" name="search">
+                <input type="text" name="search" value="<?= trim(Yii::$app->request->get('kw')) ?>">
             </div>
         </div>
     </div>

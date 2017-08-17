@@ -34,7 +34,7 @@
                 <div class="case-img-div">
                     <img src="<?= $row['cover'] ?>">
                 </div>
-                <p><?= Html::encode($row['title']) ?></p>
+                <p style="font-size: 16px;line-height: 18px"><?= Html::encode($row['en_title']) ?></p>
             </a>
         </div>
         <?php endforeach ?>

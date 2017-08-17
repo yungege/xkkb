@@ -28,19 +28,19 @@ class Cases extends ActiveRecord {
     public function rules()
     {
         return [
-            [['title', 'content', 'cover','status'], 'required', 'message'=> '数据填写有误！'],
+            [['en_title', 'en_content', 'title', 'content', 'cover','status'], 'required', 'message'=> '数据填写有误！'],
             [['admin_id','status','ctime'], 'integer'],
             ['title', 'string', 'max'=>25],
-            ['cover', 'string', 'max'=>255],
-            ['content', 'safe'],
+            [['cover','en_title'], 'string', 'max'=>255],
+            [['content','en_content'], 'safe'],
         ];
     }
 
     public function scenarios()
     {
         return [
-            'create' => ['title','content','cover'],
-            'update' => ['title','content','cover','status'],
+            'create' => ['title','content','cover','en_title', 'en_content'],
+            'update' => ['title','content','cover','status','en_title', 'en_content'],
         ];
     }
 
@@ -55,6 +55,8 @@ class Cases extends ActiveRecord {
             'admin_id'  => '',
             'status'    => '',
             'ctime'     => '',
+            'en_title'  => '', 
+            'en_content'=> '',
         ];
     }
 
@@ -73,7 +75,7 @@ class Cases extends ActiveRecord {
     }
 
     public function getTop3News(){
-        $sql = "SELECT id,title,cover,`category` FROM `case` WHERE `status` = 1 ORDER BY ctime DESC LIMIT 0,3";
+        $sql = "SELECT id,title,en_title,cover,`category` FROM `case` WHERE `status` = 1 ORDER BY ctime DESC LIMIT 0,3";
         return Yii::$app->db->createCommand($sql)->queryAll();
     }
     
