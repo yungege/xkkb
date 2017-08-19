@@ -24,7 +24,12 @@
     <div class="contact-cont">
         <div class="contact-left">
             <h4>Beijing Xinke Kaibang Technology Co. Ltd.</h4>
-            <p class="contact-type contact-addr">Addr：Changping District, Beijing, Machikou Industrial Park on both sides of the Straits</p>
+            <div class="contact-type contact-addr-div contact-addr">
+                <p>Addr：</p>
+                <p>Changping District, Beijing, Machikou Industrial Park on both sides of the Straits</p>
+                <p style="padding-top: 5px;">A1801Room, duhui building, baoan district, shenzhen city</p>
+            </div>
+            <!-- <p class="contact-type contact-addr">Addr：Changping District, Beijing, Machikou Industrial Park on both sides of the Straits</p> -->
             <p class="contact-type contact-tel">Tel：010-62633320</p>
             <p class="contact-type contact-cz">Fax：010-62611638</p>
             <p class="contact-type contact-wx">Wechat：13031060853</p>

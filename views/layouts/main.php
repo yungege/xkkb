@@ -140,17 +140,17 @@ AppAsset::register($this);
                         <a href="/zh_cn/product?lang=zh_cn&ver=1501994278.4116&ca_f=4">光纤入户系列</a>
                     </li>
                     <li>
-                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994299.8783&ca_f=5">光纤跳线系列</a>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994299.8783&ca_f=5">跳线及配件</a>
                     </li>
                     <li>
                         <a href="/zh_cn/product?lang=zh_cn&ver=1501994301.5977&ca_f=6">光传输设备</a>
                     </li>
                     <li>
-                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994308.7209&ca_f=7">综合布线</a>
+                        <a href="/zh_cn/product?lang=zh_cn&ver=1501994308.7209&ca_f=7">网络布线</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="/zh_cn/product?lang=zh_cn&ver=1501994314.445&ca_f=8">安防监控</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="show">

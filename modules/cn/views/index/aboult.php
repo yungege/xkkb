@@ -61,56 +61,15 @@
                 <div class="bd">
                     <div class="tempWrap" style="overflow: hidden; position: relative; width: 100%; height: 100%;">
                         <ul class="picList" style="position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                            <?php foreach ($gcImg as $gc): ?>
                             <li style="float: left; width: 264px;">
                                 <div class="pic">
                                     <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z1.jpg">
-                                    </a>
-                                </div>
-                                <!-- <div class="title"><a href="http://www.jq22.com/demo/jquery-SuperSlide20160825/#">效果图1</a></div> -->
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z2.jpg">
+                                        <img src="<?= $gc['img'] ?>">
                                     </a>
                                 </div>
                             </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z3.jpg">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z4.jpg">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="#">
-                                        <img src="/cn/aboult/z1.jpg">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="#">
-                                        <img src="/cn/aboult/z2.jpg">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="#">
-                                        <img src="/cn/aboult/z3.jpg">
-                                    </a>
-                                </div>
-                            </li>
+                            <?php endforeach ?>
                         </ul>
                     </div>
                 </div>
@@ -125,42 +84,18 @@
                 <div class="bd">
                     <div class="tempWrap" style="overflow: hidden; position: relative; width: 100%; height: 100%;">
                         <ul class="picList" style="position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+
+                            <?php foreach ($ckImg as $ck): ?>
                             <li style="float: left; width: 264px;">
                                 <div class="pic">
                                     <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z3.jpg">
+                                        <img src="<?= $ck['img'] ?>">
                                     </a>
                                 </div>
-                                <!-- <div class="title"><a href="http://www.jq22.com/demo/jquery-SuperSlide20160825/#">效果图1</a></div> -->
+                                <!-- <div class="title"><a href="">效果图1</a></div> -->
                             </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z1.jpg">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z2.jpg">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z2.jpg">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="float: left; width: 264px;">
-                                <div class="pic">
-                                    <a href="javascript:void(0)">
-                                        <img src="/cn/aboult/z2.jpg">
-                                    </a>
-                                </div>
-                            </li>
+                            <?php endforeach ?>
+
                         </ul>
                     </div>
                 </div>

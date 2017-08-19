@@ -156,9 +156,9 @@ AppAsset::register($this);
                     <li>
                         <a href="/en/product?lang=en&ver=1501994308.7209&ca_f=7">Integrated Wiring</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="/en/product?lang=en&ver=1501994314.445&ca_f=8">Security Monitoring</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="show">

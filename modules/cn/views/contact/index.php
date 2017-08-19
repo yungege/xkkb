@@ -24,7 +24,10 @@
     <div class="contact-cont">
         <div class="contact-left">
             <h4>北京新科凯邦科技有限公司</h4>
-            <p class="contact-type contact-addr">地址：北京市昌平区马池口两岸共盈工业园西二区</p>
+            <div class="contact-type contact-addr-div contact-addr">
+                <p>地址：北京市昌平区马池口两岸共盈工业园西二区</p>
+                <p style="padding-left: 3em;padding-top: 5px;">深圳市宝安区都汇大厦A座1801室</p>
+            </div>
             <p class="contact-type contact-tel">电话：010-62633320</p>
             <p class="contact-type contact-cz">传真：010-62611638</p>
             <p class="contact-type contact-wx">微信：13031060853</p>

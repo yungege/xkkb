@@ -14,6 +14,7 @@ use app\models\News;
 use app\models\Support;
 use app\models\Cases;
 use app\models\Message;
+use app\models\AboultImg;
 
 class IndexController extends BaseController
 {
@@ -23,6 +24,7 @@ class IndexController extends BaseController
     protected $newsModel;
     protected $supportModel;
     protected $caseModel;
+    protected $imgModel;
 
     public function init(){
         parent::init();
@@ -32,6 +34,7 @@ class IndexController extends BaseController
         $this->newsModel = new News;
         $this->supportModel = new Support;
         $this->caseModel = new Cases;
+        $this->imgModel = new AboultImg;
     }
     
     public function actionIndex(){
@@ -58,11 +61,16 @@ class IndexController extends BaseController
 
         $list = $this->qualification->getList();
 
+        $gcImgs = $this->imgModel->getImgListByType(1);
+        $ckImgs = $this->imgModel->getImgListByType(2);
+
         $this->view->params['activeMeau'] = 1;
         return $this->render('aboult', [
             'category_list' => $firstLevelMeau,
             'active_category' => $c1,
             'list' => $list,
+            'gcImg' => $gcImgs,
+            'ckImg' => $ckImgs,
         ]);
     }
 
