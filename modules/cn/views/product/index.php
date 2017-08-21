@@ -47,7 +47,7 @@ $this->title = '产品展示';
                     <div class="product-li-right">
                         <h4><?= $pval['pro_name'] ?></h4>
                         <span><i></i>型号：<?= $pval['pro_model'] ?></span><br>
-                        <span><i></i>敷设方式：<?= $pval['pro_fs_type'] ?></span>
+                        <span><i></i><?= $pval['pro_fs_type'] ?></span>
                     </div>
                     <a href="/zh_cn/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=zh_cn&ver=<?= microtime(true) ?>" class="product-more">查看详情</a>
                 </li>
