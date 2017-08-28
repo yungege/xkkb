@@ -8,7 +8,7 @@
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/product/detail.js");
 
-    $this->title = '产品展示';
+    $this->title = Html::encode($info['pro_name']);
 ?>
 
 <div class="header-pic">

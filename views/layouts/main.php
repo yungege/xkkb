@@ -20,8 +20,8 @@ AppAsset::register($this);
     <meta content="width=device-width,user-scalable=no" id="viewport" name="viewport">
     <meta name="renderer" content="webkit"><!--360渲染模式-->
     <meta name="format-detection" content="telephone=notelphone=no, email=no" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="北京新科凯邦" />
+    <meta name="keywords" content="新科凯邦_光缆_光纤_光传输_应用案例_解决方案" />
     <meta name="apple-touch-fullscreen" content="yes"/><!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!-- 设置苹果工具栏颜色:默认值为 default，可以定为 black和 black-translucent-->
     <meta http-equiv="Cache-Control" content="no-siteapp" /><!-- 不让百度转码 -->
