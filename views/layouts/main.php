@@ -159,9 +159,6 @@ AppAsset::register($this);
                     <li>
                         <a href="/zh_cn/case">机房应用</a>
                     </li>
-                    <li>
-                        <a href="/zh_cn/case">监控应用</a>
-                    </li>
                 </ul>
             </div>
             <div class="show">

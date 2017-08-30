@@ -167,9 +167,6 @@ AppAsset::register($this);
                     <li>
                         <a href="/en/case">Data Center</a>
                     </li>
-                    <li>
-                        <a href="/en/case">Monitoring</a>
-                    </li>
                 </ul>
             </div>
             <div class="show">
