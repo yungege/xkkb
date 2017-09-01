@@ -8,6 +8,11 @@
 
     $this->title = $info['title'];
 ?>
+<style type="text/css">
+    .case-detail p{
+        font-size: 16px;
+    }
+</style>
 
 <div class="header-pic">
     <div class="heaer-pic-inner">
