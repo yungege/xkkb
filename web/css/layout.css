@@ -47,10 +47,11 @@ body{
     height: 0;
     overflow: hidden;
     position: relative;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,1);
     /*background-color: black;*/
     /*margin: 0px -460px 0;*/
     margin-left: -100px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
 
     transition: height 0.3s ease;
     -webkit-transition: height 0.3s ease;
