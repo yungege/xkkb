@@ -26,12 +26,12 @@
     </div>
 
     <h4 class="news-title-h4">
-        <?= Html::encode($info['title']) ?>
+        <?= Html::encode($info['en_title']) ?>
     </h4>
     <p class="news-time">
         Time：<?= date('Y-m-d H:i:s', $info['ctime']) ?>
     </p>
     <div class="case-detail">
-        <?= $info['content'] ?>
+        <?= $info['en_content'] ?>
     </div>
 </div>
