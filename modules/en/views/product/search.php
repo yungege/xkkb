@@ -36,8 +36,7 @@ $this->title = '搜索:'.$kw;
                 <?php foreach ($list as $pky => $pval): ?>
                 <li>
                     <div class="product-li-left">
-                        <a href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>">
-                            <img src="<?= $pval['pro_cover_pic'] ?>">
+			<a style="background-image: url(<?= $pval['pro_cover_pic'] ?>);" class="product-li-left-a" href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>">
                         </a>
                     </div>
                     

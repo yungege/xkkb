@@ -39,10 +39,9 @@ $this->title = '产品展示';
                 <?php foreach ($lrow['proList'] as $pky => $pval): ?>
                 <li style="<?= $pky > 1 ? 'margin-bottom: 12px;' : ''; ?>">
                     <div class="product-li-left">
-                        <a href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>">
-                            <img src="<?= $pval['en_pro_cover_pic'] ? : $pval['pro_cover_pic'] ?>">
+                    	<a style="background-image: url(<?= $pval['pro_cover_pic'] ?>);" class="product-li-left-a" href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>">
                         </a>
-                    </div>
+		    </div>
                     
                     <div class="product-li-right">
                         <h4><?= $pval['en_pro_name'] ? : $pval['pro_name'] ?></h4>

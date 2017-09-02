@@ -72,16 +72,14 @@
     overflow: hidden;
     border-right: 1px solid #ccc;
 }
-.product-li-left:hover img{
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
-.product-li-left img{
-    /*width: 100%;*/
+.product-li-left .product-li-left-a{
+    display: block;
+    width: 100%;
     height: 100%;
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+
     transition-property: transform;
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -webkit-transform;
@@ -93,6 +91,13 @@
     -moz-transition-duration: 200ms;
     -ms-transition-duration: 200ms;
     -o-transition-duration: 200ms;
+}
+.product-li-left:hover .product-li-left-a{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 .product-li-right{
     margin-top: 34px;

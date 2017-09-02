@@ -36,11 +36,10 @@ $this->title = Html::encode($mTitle);
                 <?php foreach ($list as $pky => $pval): ?>
                 <li>
                     <div class="product-li-left">
-                        <a href="/zh_cn/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=zh_cn&ver=<?= microtime(true) ?>">
-                            <img src="<?= $pval['pro_cover_pic'] ?>">
+                    	<a style="background-image: url(<?= $pval['pro_cover_pic'] ?>);" class="product-li-left-a" href="/zh_cn/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=zh_cn&ver=<?= microtime(true) ?>">
                         </a>
-                    </div>
-                    
+		    </div>
+
                     <div class="product-li-right">
                         <h4><?= $pval['pro_name'] ?></h4>
                         <span><i></i>型号：<?= $pval['pro_model'] ?></span><br>
