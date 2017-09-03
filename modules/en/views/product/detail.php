@@ -8,7 +8,7 @@
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
     AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/product/detail.js");
 
-    $this->title = '产品展示';
+    $this->title = 'Product Display';
 ?>
 
 <div class="header-pic">
@@ -26,6 +26,17 @@
             </a>
         <?php endforeach ?>
     </div>
+
+    <?php if(!empty($tags)): ?>
+    <div class="pro-tag">
+        <p>Hot Labels</p>
+        <ul>
+            <?php foreach ($tags as $tag): ?>
+            <li><a href="/en/product/tag/<?= $active_category ?>/<?= $tag['id'] ?>?lang=en" class="<?= Yii::$app->request->get('tag') == $tag['id'] ? 'a-active' : '' ?>"><?= $tag['tag'] ?></a></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+    <?php endif ?>
 
     <h3 class="product-name"><?= Html::encode($info['en_pro_name'] ? : $info['pro_name']) ?></h3>
     <h4 class="product-type"><?= Html::encode($info['pro_model']) ?></h4>

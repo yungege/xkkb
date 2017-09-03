@@ -26,6 +26,17 @@ $this->title = Html::encode($mTitle);
         <?php endforeach ?>
     </div>
 
+    <?php if(!empty($tags)): ?>
+    <div class="pro-tag">
+        <p>热门标签</p>
+        <ul>
+            <?php foreach ($tags as $tag): ?>
+            <li><a href="/zh_cn/product/tag/<?= $active_category ?>/<?= $tag['id'] ?>?lang=zh_cn" class="<?= Yii::$app->request->get('tag') == $tag['id'] ? 'a-active' : '' ?>"><?= $tag['tag'] ?></a></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+    <?php endif ?>
+
     <div class="product-list">
         <p class="product-title">
             <a href=""><?= Html::encode($mTitle) ?></a>

@@ -7,7 +7,7 @@ AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/product/index.css");
 AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
 AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
 
-$this->title = '搜索:'.$kw;
+$this->title = 'search:'.$kw;
 ?>
 
 <div class="header-pic">

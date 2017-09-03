@@ -8,7 +8,7 @@ AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css")
 AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
 AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/product/index.js");
 
-$this->title = '产品展示';
+$this->title = $sTitle;
 
 ?>
 
@@ -28,7 +28,6 @@ $this->title = '产品展示';
         <?php endforeach ?>
     </div>
 
-    <?php if(!empty($tags)): ?>
     <div class="pro-tag">
         <p>热门标签</p>
         <ul>
@@ -37,23 +36,21 @@ $this->title = '产品展示';
             <?php endforeach ?>
         </ul>
     </div>
-    <?php endif ?>
 
-    <?php foreach ($list as $lrow): ?>
     <div class="product-list">
         <p class="product-title">
-            <a href="/zh_cn/product/more/<?= $lrow['pid'] ?>/<?= $lrow['id'] ?>?lang=zh_cn&ver=<?= microtime(true) ?>"><?= Html::encode($lrow['cate_name']) ?></a>
+            <a href=""><?= Html::encode($sTitle) ?></a>
         </p>
 
         <div class="product-cj">
             <ul class="product-cj-ul">
-                <?php foreach ($lrow['proList'] as $pky => $pval): ?>
-                <li style="<?= $pky > 1 ? 'margin-bottom: 12px;' : ''; ?>">
+                <?php foreach ($list as $pky => $pval): ?>
+                <li>
                     <div class="product-li-left">
-                    	<a style="background-image: url(<?= $pval['pro_cover_pic'] ?>);" class="product-li-left-a" href="/zh_cn/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=zh_cn&ver=<?= microtime(true) ?>">
+                        <a style="background-image: url(<?= $pval['pro_cover_pic'] ?>);" class="product-li-left-a" href="/zh_cn/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=zh_cn&ver=<?= microtime(true) ?>">
                         </a>
-		    </div>
-                    
+            </div>
+
                     <div class="product-li-right">
                         <h4><?= $pval['pro_name'] ?></h4>
                         <span><i></i>型号：<?= $pval['pro_model'] ?></span><br>
@@ -64,14 +61,11 @@ $this->title = '产品展示';
                 <?php endforeach ?>
             </ul>
         </div>
-
-        <a href="/zh_cn/product/more/<?= $pval['pro_first_type'] ?>/<?= $pval['pro_second_type'] ?>?lang=zh_cn&ver=<?= microtime(true) ?>" class="look-more">查看更多...</a>
     </div>
-    <?php endforeach ?>
 
     <div class="product-page-more">
         <?= LinkPager::widget([
-                'pagination' => $pages,
+                'pagination' => $page,
                 'nextPageLabel' => 'L', 
                 'prevPageLabel' => 'N',
                 'firstPageLabel' => '首页', 

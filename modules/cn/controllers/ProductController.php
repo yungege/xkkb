@@ -8,19 +8,22 @@ use app\modules\cn\controllers\BaseController;
 use yii\data\Pagination;
 use app\models\Category;
 use app\models\Product;
+use app\models\Tags;
 use yii\web\NotFoundHttpException;
 
 class ProductController extends BaseController
 {
-    const PAGESIZE = 3;
+    const PAGESIZE = 5;
 
     protected $categoryModel;
     protected $productModel;
+    protected $tagModel;
 
     public function init(){
         parent::init();
         $this->categoryModel = new Category;
         $this->productModel = new Product;
+        $this->tagModel = new Tags;
         $this->view->params['activeMeau'] = 2;
     }
     
@@ -51,11 +54,14 @@ class ProductController extends BaseController
             'pageSize' => self::PAGESIZE,
         ]);
 
+        $tags = $this->tagModel->getTags($c1);
+
         return $this->render('index', [
             'pages' => $pages,
             'category_list' => $firstLevelMeau,
             'list' => $list,
             'active_category' => $c1,
+            'tags' => $tags,
         ]);
     }
 
@@ -85,6 +91,7 @@ class ProductController extends BaseController
             'info' => $model->toArray(),
             'category_list' => $firstLevelMeau,
             'active_category' => $c1,
+            'tags' => $this->tagModel->getTags($c1),
         ]);
     }
 
@@ -131,6 +138,7 @@ class ProductController extends BaseController
             'list' => $list,
             'active_category' => $c1,
             'mTitle' => $sTitle,
+            'tags' => $this->tagModel->getTags($c1),
         ]);
         
     }
@@ -190,6 +198,45 @@ class ProductController extends BaseController
         $arr = explode('|', $keyword);
         $result = str_ireplace($arr, '', $string);
         return $result;
+    }
+
+    public function actionTag(){
+        $get = Yii::$app->request->get();
+        $pageSize = 12;
+        $firstLevelMeau = $this->categoryModel->getFirstLevelMeauList(1);
+
+        $c1 = (int)$get['ca_f'];
+        $tag = (int)$get['tag'];
+        $pn = (!is_numeric($get['page']) || (int)$get['page'] <= 0) ? 1 : $get['page'];
+        $offset = ($pn - 1) * $pageSize;
+
+        if($c1 <= 0 || $tag <= 0){
+            throw new NotFoundHttpException("Page not found");
+        }
+
+        $tagTitle = Tags::findOne($tag)->tag;
+        $sTitle = Category::findOne($c1)->cate_name;
+
+        $list = [];
+        $count = $this->productModel->getCountByTag($c1, $tagTitle);
+        if($count > 0){
+            $list = $this->productModel->getListByTagPage($c1, $tagTitle, $offset, $pageSize);
+        }
+
+        $pages = new Pagination([
+            'totalCount' => $count,
+            'pageSize' => $pageSize,
+        ]);
+
+        $tags = $this->tagModel->getTags($c1);
+        return $this->render('tag',[
+            'tags' => $tags,
+            'sTitle' => ($sTitle . ' . ' . $tagTitle),
+            'page' => $pages,
+            'list' => $list,
+            'category_list' => $firstLevelMeau,
+            'active_category' => $c1,
+        ]);
     }
 
 }

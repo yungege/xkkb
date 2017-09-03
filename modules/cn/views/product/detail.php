@@ -27,6 +27,17 @@
         <?php endforeach ?>
     </div>
 
+    <?php if(!empty($tags)): ?>
+    <div class="pro-tag">
+        <p>热门标签</p>
+        <ul>
+            <?php foreach ($tags as $tag): ?>
+            <li><a href="/zh_cn/product/tag/<?= $active_category ?>/<?= $tag['id'] ?>?lang=zh_cn" class="<?= Yii::$app->request->get('tag') == $tag['id'] ? 'a-active' : '' ?>"><?= $tag['tag'] ?></a></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+    <?php endif ?>
+
     <h3 class="product-name"><?= Html::encode($info['pro_name']) ?></h3>
     <h4 class="product-type"><?= Html::encode($info['pro_model']) ?></h4>
 

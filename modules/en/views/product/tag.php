@@ -6,13 +6,15 @@ use yii\helpers\Html;
 AppAsset::addCss($this, Yii::$app->request->baseUrl."/cn/product/index.css");
 AppAsset::addCss($this, Yii::$app->request->baseUrl."/common/css/hoverMeau.css");
 AppAsset::addScript($this, Yii::$app->request->baseUrl."/common/js/hoverMeau.js");
+AppAsset::addScript($this, Yii::$app->request->baseUrl."/cn/product/index.js");
 
-$this->title = Html::encode($mTitle);
+$this->title = $sTitle;
+
 ?>
 
 <div class="header-pic">
     <div class="heaer-pic-inner">
-        <p class="header-word"><?= Html::encode($mTitle) ?></p>
+        <p class="header-word">Product</p>
     </div>
 </div>
 
@@ -26,7 +28,6 @@ $this->title = Html::encode($mTitle);
         <?php endforeach ?>
     </div>
 
-    <?php if(!empty($tags)): ?>
     <div class="pro-tag">
         <p>Hot Labels</p>
         <ul>
@@ -35,11 +36,10 @@ $this->title = Html::encode($mTitle);
             <?php endforeach ?>
         </ul>
     </div>
-    <?php endif ?>
 
     <div class="product-list">
         <p class="product-title">
-            <a href="javascript:void(0)"><?= Html::encode($mTitle) ?></a>
+            <a href=""><?= Html::encode($sTitle) ?></a>
         </p>
 
         <div class="product-cj">
@@ -47,16 +47,18 @@ $this->title = Html::encode($mTitle);
                 <?php foreach ($list as $pky => $pval): ?>
                 <li>
                     <div class="product-li-left">
-			<a style="background-image: url(<?= $pval['pro_cover_pic'] ?>);" class="product-li-left-a" href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>">
+                        <a style="background-image: url(<?= $pval['pro_cover_pic'] ?>);" class="product-li-left-a" href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>">
                         </a>
                     </div>
-                    
+
                     <div class="product-li-right">
-                        <h4><?= $pval['en_pro_name'] ? : $pval['pro_name'] ?></h4>
+                        <h4><?= $pval['en_pro_name'] ?></h4>
                         <span><i></i>Model：<?= $pval['pro_model'] ?></span><br>
-                        <span><i></i><?= $pval['en_pro_fs_type'] ? : $pval['pro_fs_type'] ?></span>
+                        <span><i></i><?= $pval['en_pro_fs_type'] ?></span>
                     </div>
-                    <a href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>" class="product-more">View Details</a>
+                    <a href="/en/product/<?= $pval['id'] ?>?ca_f=<?= $pval['pro_first_type'] ?>&ca_s=<?= $pval['pro_second_type'] ?>&lang=en&ver=<?= microtime(true) ?>" class="product-more">
+                        View Details
+                    </a>
                 </li>
                 <?php endforeach ?>
             </ul>
@@ -65,11 +67,11 @@ $this->title = Html::encode($mTitle);
 
     <div class="product-page-more">
         <?= LinkPager::widget([
-                'pagination' => $pages,
-                'nextPageLabel' => '>>', 
-                'prevPageLabel' => '<<',
-                'firstPageLabel' => 'First', 
-                'lastPageLabel' => 'Last',
+                'pagination' => $page,
+                'nextPageLabel' => 'L', 
+                'prevPageLabel' => 'N',
+                'firstPageLabel' => '首页', 
+                'lastPageLabel' => '尾页',
                 'options' => ['class' => 'xkkb-pagination'],
             ]);
         ?>
