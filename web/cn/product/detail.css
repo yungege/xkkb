@@ -124,6 +124,7 @@
 .pro-tag ul li{
     float: left;
     margin-right: 15px;
+    margin-bottom: 10px;
     border: 2px dashed #ddd;
     padding: 3px 10px;
 }
